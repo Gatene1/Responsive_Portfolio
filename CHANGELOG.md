@@ -87,3 +87,7 @@ Light styling polish pass on buttons, borders, and page transitions
 
 # 8/25/2025
 Updated verbiage in the project Webpages and the main Webpage to catch the eyes of recruiters and employers.
+
+# 10/30/2025
+- Began working on upgrading the site to take filters, group badges, and new badges.
+- Started on making the project page for Toy Path.

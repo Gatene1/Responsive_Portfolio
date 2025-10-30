@@ -1,5 +1,7 @@
 :root { --bg-color: #f7f7f7; --text-color: #444444; --accent-color: #7c3aed; --card-bg: #1e1e1e;
-    --listItems: rgba(170, 170, 170, 0.8); }
+    --listItems: rgba(170, 170, 170, 0.8); --bg: 0 0% 8%; --fg: 0 0% 98%; --chip-backdrop: blur(8px) saturate(110%);
+    --chip-alpha: 0.12; /* glassy */ --chip-border: 0.35; --gl: 152 60% 30%; --jj: 220 65% 50%; --tl: 355 70% 48%;
+    --gm: 260 55% 52%; }
 
 body { margin: 0; padding: 0; padding-bottom: 60px; background-color: var(--bg-color); color: var(--text-color);
        accent-color: var(--accent-color); display: flex; flex-direction: column; min-height: 100vh;
@@ -90,6 +92,158 @@ footer { display: block !important; width: 100%;  position: absolute; bottom: 0p
 footer nav a { color: #ddd; margin: 0 0.5em; text-decoration: none; }
 
 footer nav a:hover { text-decoration: underline; }
+
+.project-chip {
+    display:inline-flex; gap:.5rem; align-items:center;
+    padding:.35rem .6rem; border-radius:999px;
+    font:500 12px/1 system-ui, sans-serif; letter-spacing:.02em;
+    backdrop-filter: var(--chip-backdrop);
+    border:1px solid hsl(var(--tone) / var(--chip-border));
+    color:hsl(var(--tone));
+    background: hsl(var(--tone) / var(--chip-alpha));
+}
+
+.project-card[data-group="glean"] .project-chip { --tone: var(--gl); }
+.project-card[data-group="jams"]  .project-chip { --tone: var(--jj); }
+.project-card[data-group="tools"] .project-chip { --tone: var(--tl); }
+.project-card[data-group="games"] .project-chip { --tone: var(--gm); }
+
+
+
+/* === Spruce's Category Filter Buttons === */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 1.5rem auto 2rem;
+    padding: 0;
+}
+
+.filters button {
+    background: rgba(199, 199, 199, 1);
+    color: #444;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(4px) saturate(120%);
+}
+
+.filters button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: #1e1e1e;
+    transform: translateY(-1px);
+}
+
+.filters button.active {
+    background: var(--accent-color);
+    color: #eee;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 8px rgba(124, 58, 237, 0.5); /* glow matches accent */
+}
+
+@media (max-width: 500px) {
+    .filters {
+        gap: 0.5rem;
+    }
+    .filters button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Spruce: center the <details> Legend */
+.legend {
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    text-align: center;
+}
+.legend summary {
+    cursor: pointer;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+.legend ul {
+    list-style: none;
+    padding: 0;
+    margin: .5rem 0 0;
+    display: inline-flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* A11Y utility */
+.visually-hidden {
+    position:absolute!important; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+
+/* Browse by Group row */
+.browse-groups { padding: 0 1rem 1rem; }
+.group-grid {
+    display:grid; gap: .75rem; grid-template-columns: repeat(2, minmax(0,1fr));
+    max-width: 680px; margin: 0 auto 1rem;
+}
+.group-card {
+    display:flex; align-items:center; justify-content:center;
+    text-decoration:none; font-weight: 800;
+    padding: .9rem 1rem; border-radius: 12px; color: #fff;
+    border:1px solid rgba(255,255,255,.25);
+    backdrop-filter: blur(6px) saturate(115%);
+    transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+}
+.group-card:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,.15); }
+
+:root{
+    --gl: 152 60% 30%;  /* Glean */
+    --jj: 220 65% 50%;  /* Jams */
+    --tl: 355 70% 48%;  /* Tools */
+    --gm: 260 55% 52%;  /* Games */
+}
+.group-glean { background: hsl(var(--gl) / .25); border-color: hsl(var(--gl) / .5); }
+.group-jams  { background: hsl(var(--jj) / .25); border-color: hsl(var(--jj) / .5); }
+.group-tools { background: hsl(var(--tl) / .25); border-color: hsl(var(--tl) / .5); }
+.group-games { background: hsl(var(--gm) / .25); border-color: hsl(var(--gm) / .5); }
+
+@media (min-width: 680px){
+    .group-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+}
+
+/* === Spruce: tiny NEW asterisk badge (bottom-left, hangs off edge) === */
+.project-card { position: relative; }
+
+/* Add class .is-new to any .project-card to show the marker */
+.project-card.is-new::before {
+    content: "✱";              /* simple asterisk; swap to "✦" or "✸" if you prefer */
+    position: absolute;
+    left: -6px;                /* hangs off the edge */
+    bottom: -6px;              /* hangs off the edge */
+    width: 33px;
+    height: 33px;
+    display: grid;
+    place-items: center;
+    font: 900 20px/1 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    color: #1a1a1a;
+    background: #e0991d;       /* golden yellow */
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,.25);
+    transform: rotate(-12deg);
+    pointer-events: none;      /* never blocks clicks */
+    z-index: 2;
+}
+
+/* (Optional) dark theme tweak if needed later */
+/* .dark .project-card.is-new::before { background:#ffcc33; color:#0d0d0d; } */
+
+
+
 
 .model-gallery {
     display: flex;

@@ -32,8 +32,28 @@
         <p>Explore my game prototypes, custom tools, and creative experiments below. Each one reflects my design philosophy and technical range.</p>
     </section>
 
+    <details class="legend" aria-label="Project group legend">
+        <summary>Legend</summary>
+        <ul>
+            <li><span class="project-chip" style="--tone:var(--gl)">Glean</span> – Series</li>
+            <li><span class="project-chip" style="--tone:var(--jj)">Game Jams</span> – Jam entries</li>
+            <li><span class="project-chip" style="--tone:var(--tl)">Tools</span> – Dev tools</li>
+            <li><span class="project-chip" style="--tone:var(--gm)">Games</span> – Standalone</li>
+        </ul>
+    </details>
+
+    <!-- Spruce's Category Filter Bar -->
+    <nav class="filters" aria-label="Project Filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="tools">Tools</button>
+        <button data-filter="games">Games</button>
+        <button data-filter="glean">Glean</button>
+        <button data-filter="jams">Game Jams</button>
+    </nav>
+
+
     <section class="project-grid">
-        <article class="project-card" id="card1">
+        <article class="project-card" id="card1" data-group="tools">
             <div class="thumb-wrapper">
                 <img src="Images/topicCreator2.png" alt="Topic Creator 2.5" />
                 <div class="badge version" title="The version of Topic Creator I lost in 2023 in a move.">
@@ -43,10 +63,12 @@
             <br clear="all">
             <h3>Topic Creator 2.5</h3>
             <p>A custom ideation engine that generates three-word topic seeds using a weighted pseudo-random algorithm.</p>
+            <div class="meta">
+                <span class="project-chip" aria-label="Group: Tools">Tools</span>
             <!--            <p>A Topic generator remade in Unity with the help of my AI Partner.</p>-->
         </article>
 
-        <article class="project-card" id="card2">
+        <article class="project-card" id="card2" data-group="tools">
             <div class = "thumb-wrapper">
                 <img src="Images/SpriteGrid-Temp-Thumb.png" alt="SpriteGrid tile-based editor and character" />
                 <div class="badge version" title="A Finalized and stable build of SpriteGrid ">v3.3 Complete!</div>
@@ -54,10 +76,12 @@
             <br clear="all">
             <h3>SpriteGrid</h3>
             <p>A cross-version sprite editor supporting legacy HexString and modern Uint32 formats. Built for flexible pixel art creation and export.</p>
+            <div class="meta">
+                <span class="project-chip" aria-label="Group: Tools">Tools</span>
             <!--            <p>Custom sprite editor built from scratch.</p>-->
         </article>
 
-        <article class="project-card" id="card3">
+        <article class="project-card" id="card3" data-group="jams">
             <div class="thumb-wrapper">
                 <img src="Images/booska_Image3.png" alt="Group Game Jam Submission in UE5" />
                 <div class="badge demo" title="Game Jam submission for Colors R Everything.">
@@ -67,9 +91,11 @@
             <br clear="all">
             <h3>Color Me Booska</h3>
             <p>Group Game Jam Submission in Unreal Engine 5.</p>
+            <div class="meta">
+                <span class="project-chip" aria-label="Group: Game Jams">Game Jams</span>
         </article>
 
-        <article class="project-card" id="card4">
+        <article class="project-card" id="card4" data-group="glean">
             <div class="thumb-wrapper">
                 <img src="Images/blink_Image1.png" alt="Blink Level Screenshot" />
                 <div class="badge wip" title="Part 1 on HTML5 games that embody Game Design Principles.">
@@ -78,11 +104,13 @@
             </div>
             <br clear="all">
             <h3>Blink</h3>
-            <p>Part 1 of Glean: an HTML5 prototype exploring Game Design Patterns through movement constraints.</p>
+            <p>Part 2 of Glean: an HTML5 prototype exploring Game Design Patterns through movement constraints.</p>
+            <div class="meta">
+                <span class="project-chip" aria-label="Group: Glean">Glean</span>
             <!--            <p>Part 1 on HTML5 games that embody Game Design Principles.</p>-->
         </article>
 
-        <article class="project-card" id="card5">
+        <article class="project-card" id="card5" data-group="tools">
             <div class="thumb-wrapper">
                 <img src="Images/respSite-Thumb.png" alt="Responsive site with AI thumbnail" />
                 <div class="badge collab" title="The version of my site I never could quite get, until Spruce">
@@ -92,6 +120,8 @@
             <br clear="all">
             <h3>Responsive Portfolio</h3>
             <p>A responsive showcase of my work, designed and built by hand with my AI partner.</p>
+            <div class="meta">
+                <span class="project-chip" aria-label="Group: Tools">Tools</span>
             <!--            <p>Responsive portfolio site showcasing Human + AI collaboration.</p>-->
             <!--            <p>My portfolio site made with my AI Partner.</p>-->
         </article>

@@ -2,7 +2,7 @@ function getel(id) {
     return document.getElementById(id);
 }
 const projectRoutes = {
-    "card1": "topiccreator_Proj.html?v=" + Date.now(),
+    "card1": "toy_Proj.html?v=" + Date.now(),
     "card2": "spriteGrid_Proj.html?v=" + Date.now(),
     "card3": "booska_Proj.html?v=" + Date.now(),
     "card4": "blink_Proj.html?v=" + Date.now(),
@@ -38,6 +38,37 @@ if (modalImg)
         modal.style.display = "none";
     });
 
+
+// === Spruce's Category Filter ===
+// Adds click filtering for data-group categories on projects.html
+
+window.addEventListener("DOMContentLoaded", () => {
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const cards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update button state
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const selected = btn.getAttribute('data-filter');
+
+            cards.forEach(card => {
+                const group = card.dataset.group;
+                // Show all if 'all' is clicked, otherwise match groups
+                if (selected === 'all' || group === selected) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+
+
+
 window.addEventListener("DOMContentLoaded", () => {
     const versionTag = `v=${Date.now()}`;
 
@@ -62,4 +93,29 @@ window.addEventListener("DOMContentLoaded", () => {
             link.setAttribute("href", `${href}?${versionTag}`);
         }
     });
+
+
+    // === Spruce: Auto "NEW" badge for recent projects ===
+// Shows a starburst on cards published within the last N days.
+    (function markNewProjects(daysFresh = 21){
+        const now = new Date();
+        document.querySelectorAll('.project-card').forEach(card => {
+            const iso = card.getAttribute('data-published');
+            if (!iso) return;
+            const published = new Date(iso + 'T00:00:00');
+            const diffDays = Math.floor((now - published) / (1000*60*60*24));
+            if (diffDays <= daysFresh) {
+                if (!card.querySelector('.burst-new')) {
+                    const badge = document.createElement('span');
+                    badge.className = 'burst-new';
+                    badge.setAttribute('aria-label','New project');
+                    badge.setAttribute('title','New');
+                    card.appendChild(badge);
+                }
+            }
+        });
+    })();
+
+
+
 });
