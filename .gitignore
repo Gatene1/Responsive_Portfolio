@@ -1,0 +1,86 @@
+# === Core ===
+# macOS / Windows system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+
+# Node / npm (for optional build tools like Vite, Eleventy)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build and cache directories
+dist/
+_build/
+.cache/
+.tmp/
+.temp/
+public/
+.vite/
+.output/
+
+# Local dev files
+.env
+.env.*
+*.local
+*.log
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+
+# OS trash / temporary
+.trash/
+*.tmp
+*.temp
+*.old
+
+# Generated assets (optional)
+*.map
+*.min.css
+*.min.js
+
+# Backup / export / misc
+*.zip
+*.tar.gz
+*.7z
+*.bak
+*.orig
+
+# GitHub Pages output (if using gh-pages branch)
+gh-pages/
+
+# Generated docs or screenshots
+docs/
+screenshots/
+*.pdf
+
+# === Optional extras ===
+# If you ever use Eleventy
+_site/
+
+# If you ever use Svelte, Astro, or Vite later
+vite.config.*
+astro.config.*
+eleventy.config.*
+svelte.config.*
+
+# If you export audio or video for site demos
+*.mp4
+*.mov
+*.wav
+*.aiff
+*.flac
+
+# If you store image-gen reference exports
+imagegen/

@@ -1,0 +1,141 @@
+:root { --bg-color: #f7f7f7; --text-color: #444444; --accent-color: #7c3aed; --card-bg: #1e1e1e;
+    --listItems: rgba(170, 170, 170, 0.8); }
+
+body { margin: 0; padding: 0; padding-bottom: 60px; background-color: var(--bg-color); color: var(--text-color);
+       accent-color: var(--accent-color); display: flex; flex-direction: column; min-height: 100vh;
+       background-image: url('Images/BooskaBg.png'); background-repeat: no-repeat; background-size: 300px;
+       background-position: bottom right; background-attachment: fixed; filter: brightness(130%) contrast(85%);
+}
+
+header { padding: 1rem; padding-bottom: 40px; background-color: var(--accent-color); color: white; text-align: center; }
+
+h2.header { margin-bottom: 0px; }
+
+div.nav-links { display: flex; justify-content: center; gap: 5rem; row-gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem; }
+a.header { color: white; }
+a:visited.header { color: white; }
+a.header-home { color: white; text-decoration: none; }
+a:visited.header-home { color: white; text-decoration: none; }
+
+.content { width: 100%; height: max-content; }
+
+.hero { padding: 2rem 1rem; text-align: center; }
+.hero h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.hero p { font-size: 1rem; opacity: 0.8; }
+
+.btn { display: inline-block; margin-top: 1rem; padding: 0.75rem 1.25rem; background-color: var(--accent-color);
+       color: white; border: none; border-radius: 8px; text-decoration: none; font-weight: bold; }
+
+.project-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-bottom: 1rem; }
+.project-card { position: relative; flex: 0 1 100%; max-width: 300px; background: var(--card-bg); padding: 1rem;
+    border-radius: 8px; color: #eeeeee; }
+/*.project-card img { max-width: 50%; height: auto; display: block; margin: 0 auto; float: left; }*/
+
+.thumb-wrapper { position: relative; display: inline-block; float: left; margin-right: 1rem; }
+.thumb-wrapper img { display: block; max-width: 50%; height: auto; }
+
+/*.badge-wip { position: absolute; bottom: 8px; right: 52%; background: rgba(0, 0, 0, 0.5); color: white;
+    font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; pointer-events: none; float: left; } */
+
+.badge { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); background: rgba(0, 0, 0, 1);
+        color: white; font-size: 0.75rem; padding: 4px 10px; border-radius: 4px; pointer-events: none;
+        white-space: nowrap; }
+.badge.wip     { background: rgba(255, 140, 0, 0.6); } /* orange */
+.badge.live    { background: rgba(0, 128, 0, 0.6); }   /* green */
+.badge.demo    { background: rgba(70, 130, 180, 0.8); } /* steel blue */
+.badge.version { background: rgba(0, 0, 0, 0.8); }     /* default black */
+.badge.collab  { background: rgba(128, 0, 128, 0.8); }/* deep violet for partnership */
+
+.about { padding: 2rem 1rem; max-width: 800px; margin: auto; color: var(--text-color); line-height: 1.6; }
+.about h2, .about h3 { background: rgba(238, 238, 238, 0.8); padding: 0.5rem 1rem; border-radius: 8px;
+    color: var(--text-color); text-align: center; font-weight: bolder; text-shadow: 0 0 3px #7c3aed, 0 0 6px #fff; }
+.about ul { list-style-type: none; padding: 0; margin: 1rem 0; display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 1rem; }
+.about li { background: var(--listItems); padding: 0.5rem 1rem; border-radius: 8px; font-weight: bold;
+    text-align: center; }
+.about p { background: rgba(238, 238, 238, 0.8); padding: 0.5rem 1rem; border-radius: 8px; font-weight: bold; }
+
+.about { animation: fadeIn 1s ease-in-out; }
+
+.project-detail { max-width: 800px; margin: auto; padding: 2rem 1rem; line-height: 1.6; }
+.project-detail h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+.project-detail p { background: rgba(238, 238, 238, 0.8); padding: 0.5rem 1rem; border-radius: 8px; font-weight: bolder; }
+.project-detail h2, .project-detail h3 { background: rgba(238, 238, 238, 0.8); padding: 0.5rem 1rem; border-radius: 8px;
+        color: var(--text-color); text-align: center; font-weight: bolder; text-shadow: 0 0 3px #7c3aed, 0 0 6px #fff; }
+.project-detail ul { list-style-type: none; padding: 0; margin: 1rem 0; display: flex; flex-wrap: wrap;
+    justify-content: center; gap: 1rem; }
+.project-detail li { background: var(--listItems); padding: 0.5rem 1rem; border-radius: 8px; font-weight: bold;
+    text-align: center; }
+.project-detail .hero { max-width: 800px; margin: auto; padding: 2rem 1rem; text-align: center; }
+.project-detail img { max-width: 100%; height: auto; }
+.project-detail legend { font-weight: bold; }
+
+fieldset { border: 1px solid #ccc; padding: 1.5em; margin: 1em 0; border-radius: 5px; position: relative; box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05); }
+fieldset *:not(legend, input) { padding-left: 1em; }
+fieldset input, textarea { margin-left: 1em; }
+
+iframe { margin: 1rem 0; border-radius: 12px; }
+
+img.imageWrap { float: left; padding-right: .5rem; border-radius: 12px;}
+div.image-gallery { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; object-fit: cover;
+                    align-items: center; gap: 2rem; }
+div.image-gallery img { max-width: 35vw; height: auto; }
+
+p.link { display: block; padding: 1rem 0 2rem 0; }
+
+footer { display: block; background-color: #222; color: white; text-align: center; padding: 1rem 0 1rem; font-size: 0.9rem; margin-top: 2rem; }
+
+footer { display: block !important; width: 100%;  position: absolute; bottom: 0px; z-index: 1; }
+
+footer nav a { color: #ddd; margin: 0 0.5em; text-decoration: none; }
+
+footer nav a:hover { text-decoration: underline; }
+
+.model-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.model-gallery li {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+.model-gallery img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Spruce's Image Modal */
+.modal { display: none; position: fixed; z-index: 999; top: 0; left: 0; width: 100vw; height: 100vh;
+        background: rgba(0,0,0,0.85); justify-content: center; align-items: center; }
+.modal img { max-width: 90%; max-height: 90%; border-radius: 12px; box-shadow: 0 0 12px rgba(255,255,255,0.2); }
+.modal-bg { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+/* End Spruce's Image Modal */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 400px) {
+    .hero h1 { font-size: 1.5rem; }
+    .hero p { font-size: 0.9rem;  }
+}
+
+@media (min-width: 600px) {
+    .project-card {
+        flex: 0 1 calc(50% - 1rem);
+    }
+}
+
+@media (min-width: 768px) {
+    .project-card {
+        flex: 0 1 calc(50% - 1rem);
+    }
+}
