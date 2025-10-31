@@ -7,6 +7,7 @@ body { margin: 0; padding: 0; padding-bottom: 60px; background-color: var(--bg-c
        accent-color: var(--accent-color); display: flex; flex-direction: column; min-height: 100vh;
        background-image: url('Images/BooskaBg.png'); background-repeat: no-repeat; background-size: 300px;
        background-position: bottom right; background-attachment: fixed; filter: brightness(130%) contrast(85%);
+       font-family: Arial Rounded MT Bold;
 }
 
 header { padding: 1rem; padding-bottom: 40px; background-color: var(--accent-color); color: white; text-align: center; }
@@ -242,6 +243,78 @@ footer nav a:hover { text-decoration: underline; }
 /* (Optional) dark theme tweak if needed later */
 /* .dark .project-card.is-new::before { background:#ffcc33; color:#0d0d0d; } */
 
+
+/* === Spruce: tooltip system (Toy Path) === */
+.tooltip-list { list-style:none; padding:0; margin:1rem 0;
+    display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; }
+
+.tooltip-list .has-tip {
+    position:relative;
+    background: var(--listItems);
+    padding:0.5rem 1rem;
+    border-radius:8px;
+    font-weight:bold;
+    text-align:center;
+    cursor:help;
+    transition:transform .15s ease, box-shadow .15s ease;
+}
+.tooltip-list .has-tip:hover,
+.tooltip-list .has-tip:focus {
+    transform:translateY(-2px);
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+/* Tooltip bubble */
+.tooltip-list .has-tip::after {
+    content: attr(data-tip);
+    position:absolute;
+    left:50%; bottom: calc(100% + 10px);
+    transform: translateX(-50%) translateY(8px);
+    background:#222;
+    color:#f7f7f7;
+    border-radius:6px;
+    padding:.45rem .6rem;
+    font-size:.8rem;
+    line-height:1.25;
+    font-weight:500;
+    width:max-content; max-width:240px;
+    text-align:center;
+    white-space:normal;
+    opacity:0;
+    pointer-events:none;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+    transition:opacity .15s ease, transform .15s ease;
+    z-index:30;
+}
+.tooltip-list .has-tip:hover::after,
+.tooltip-list .has-tip:focus::after {
+    opacity:1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Small arrow */
+.tooltip-list .has-tip::before {
+    content:"";
+    position:absolute;
+    left:50%; bottom: calc(100% + 4px);
+    transform:translateX(-50%) rotate(45deg);
+    width:10px; height:10px;
+    background:#222;
+    opacity:0;
+    transition:opacity .15s ease;
+    z-index:29;
+}
+.tooltip-list .has-tip:hover::before,
+.tooltip-list .has-tip:focus::before {
+    opacity:1;
+}
+
+/* Reduce animation if user prefers */
+@media (prefers-reduced-motion: reduce) {
+    .tooltip-list .has-tip { transition:none; }
+    .tooltip-list .has-tip::after,
+    .tooltip-list .has-tip::before { transition:none; }
+}
 
 
 

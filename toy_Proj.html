@@ -39,7 +39,8 @@
     </div>
 
     <div class="image-gallery">
-      <img src="Images/blink_Image1.png" alt="Blink level screenshot" />
+      <img src="Images/LvlSShot.png" alt="Toy Path level 1 screenshot." /><br><br>
+      <img src="Images/Lvl3SShot.png" alt="Toy Path level w/ Envious Toy screenshot." />
     </div>
   </section>
 
@@ -52,26 +53,53 @@
 
     <section class="about">
       <h2>About This Project</h2>
-      <p>Retro-style HTML5 platformer exploring movement constraints as a core design mechanic. Players “blink” across terrain instead of walking, creating new risk/reward dynamics. Demonstrates innovative game design pattern use, JavaScript prototyping, and player-centric mechanic testing.</p>
+      <p><i>Toy Path</i> is a minimalist HTML5 puzzle game where the player’s only power is holding their breath.
+        Bridges drop, toys move, and the environment reacts only while time stands still — forcing the player to think before they breathe.<br><br>
+
+        Developed in <i>12 days</i> between Spark deliveries and job searching, Toy Path explores game design patterns such as Resource-Limited Movement, Safe Zones, Environmental Timing Puzzle, and Indirect Control.<br><br>
+
+        What began as a thought experiment in the <i>Glean Cadence Lab</i>—“what if toys only moved when you held your breath?”—became my first completed game. It marks the moment I moved from tool-maker to game-maker, bringing an idea fully to life alongside my AI collaborator, <i>Spruce</i>.</p>
 <!--      <p>-->
 <!--        Blink is a top-down puzzle game about navigating minimal mazes to reunite with a mysterious character on the other side. Currently in development, its focus is on movement-based problem solving and level-based progression.-->
 <!--      </p>-->
 
       <h3>Core Features</h3>
-      <ul>
-        <li>Find the princess-style game</li>
-        <li>One-screen puzzle design</li>
-        <li>Pixel-perfect pathfinding</li>
+      <ul class="tooltip-list">
+        <li class="has-tip" tabindex="0" data-tip="Limits actions with a breath meter to add tension and planning.">
+          Breath-based movement mechanic
+        </li>
+        <li class="has-tip" tabindex="0" data-tip="Hazards run on repeating cycles that reward precise timing.">
+          Environmental timing puzzles
+        </li>
+        <li class="has-tip" tabindex="0" data-tip="Guide AI-driven toys instead of moving them directly.">
+          Indirect control through toy behavior
+        </li>
+        <li class="has-tip" tabindex="0" data-tip="Each puzzle fits on a single screen for instant readability.">
+          One-screen level design
+        </li>
+        <li class="has-tip" tabindex="0" data-tip="Subtle cues and instant retries maintain flow without frustration.">
+          Minimalist feedback &amp; soft-reset loops
+        </li>
       </ul>
 
       <h3>Built With</h3>
-      <ul>
-        <li>JavaScript + HTML5 Canvas</li>
-        <li>Custom engine with typed array optimizations</li>
-        <li>Modular level editor system</li>
+      <ul class="tooltip-list">
+        <li class="has-tip" tabindex="0" data-tip="Engine-free rendering and logic directly in the browser.">
+          JavaScript + HTML5 Canvas
+        </li>
+        <li class="has-tip" tabindex="0" data-tip="Breadth-first search ensures reliable paths around obstacles.">
+          Custom grid engine with BFS pathfinding
+        </li>
+        <li class="has-tip" tabindex="0" data-tip="Levels are data-driven for easy expansion and tuning.">
+          Modular level data loader
+        </li>
+        <li class="has-tip" tabindex="0" data-tip="A flipbook-style guide provides nostalgic, intuitive onboarding.">
+          Flipbook-style digital instruction manual
+        </li>
       </ul>
 
-      <p><strong>Status:</strong> In active development</p>
+      <p><strong>Status:</strong> v1.0 Complete!</p>
+      <p><strong>Next Steps:</strong> There will be another version of the game when adding it to the Glean project.</p>
     </section>
 </main>
 <footer>
