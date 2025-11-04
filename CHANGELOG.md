@@ -91,3 +91,9 @@ Updated verbiage in the project Webpages and the main Webpage to catch the eyes 
 # 10/30/2025
 - Began working on upgrading the site to take filters, group badges, and new badges.
 - Started on making the project page for Toy Path.
+
+# 11/1/2025 - 11/4/2025
+- Added links for other crowdfunding sites.
+- Finished building the headers and footers to match new content.
+- Added WordPress blog.
+- Added new files for reusing footers and some headers, to not update each file all the time.

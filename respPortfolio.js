@@ -2,11 +2,12 @@ function getel(id) {
     return document.getElementById(id);
 }
 const projectRoutes = {
-    "card1": "toy_Proj.html?v=" + Date.now(),
+    "card1": "topiccreator_Proj.html?v=" + Date.now(),
     "card2": "spriteGrid_Proj.html?v=" + Date.now(),
     "card3": "booska_Proj.html?v=" + Date.now(),
     "card4": "blink_Proj.html?v=" + Date.now(),
-    "card5": "respSite_Proj.html?v=" + Date.now()
+    "card5": "respSite_Proj.html?v=" + Date.now(),
+    "card6": "toy_Proj.html?v=" + Date.now()
 };
 
 Object.entries(projectRoutes).forEach(([cardId, url]) => {

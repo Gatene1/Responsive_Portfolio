@@ -15,16 +15,8 @@
   <title>Toy Path Project Page</title>
 </head>
 <body>
-<header>
-  <h2 class="header"><a class="header-home" href="index.html">David Riley</a></h2><br>
-  <div class="nav-links">
-    <a class="header" href="index.html">Home</a>
-    <a class="header" href="projects.html">Projects</a>
-    <a class="header" href="models.html">3D Models</a>
-    <a class="header" href="about.html">About</a>
-    <a class="header" href = "respContact.html">Contact Me</a>
-  </div>
-</header>
+
+<div data-include="Partials/respHeader.html"></div>
 
 <main class="project-detail">
   <section class="hero">
@@ -101,17 +93,97 @@
       <p><strong>Status:</strong> v1.0 Complete!</p>
       <p><strong>Next Steps:</strong> There will be another version of the game when adding it to the Glean project.</p>
     </section>
+
+  <!-- toy_Proj.html — ADD below Core Features -->
+  <section id="how-to-play" class="card pad flow" aria-labelledby="howToPlayTitle">
+    <h2 id="howToPlayTitle">How to Play</h2>
+
+    <details class="faq">
+      <summary><strong>Goal</strong></summary>
+      <p>Nudge the child safely to the exit. This includes making the child hold their breath so the toy can pull the
+        lever, and making the child outsmart the Envious Toys on patrol that's keeping them from the exit.</p>
+    </details>
+
+    <details class="faq">
+      <summary><strong>Core Loop</strong></summary>
+      <ul>
+        <li>Guide the toy to the lever.</li>
+        <li>Plan a safe route to the exit.</li>
+        <li>Avoid getting caught by the Envious Toys on patrol.</li>
+        <li>Avoid drowning.</li>
+        <li>Avoid running out of breath.</li>
+      </ul>
+    </details>
+
+    <details class="faq">
+      <summary><strong>Controls</strong></summary>
+      <ul>
+        <li>Keyboard / Controller: Move with the arrow keys.</li>
+        <li>Hold 'B' to hold your breath so the toy can move.</li>
+        <li>Use ESC or 'R' to Undo/Reset the current level.</li>
+      </ul>
+    </details>
+  </section>
+
+
+  <section id="links" class="about" aria-labelledby="linksTitle">
+    <h2 id="linksTtile">Links</h2>
+    <ul class="link-list">
+
+      <li data-brand="play">
+        <a href="https://outboxgames.com/gridgame.html" target="_play" rel="noopener">
+          <img src="Images/icons/joystick.svg" alt="Play Online" class="link-icon"> Play Toy Path
+        </a>
+      </li>
+
+      <li data-brand="github">
+        <a href="https://github.com/Gatene1/GridGame" target="_github" rel="noopener">
+          <!-- Use SVGs that inherit currentColor (see note below) -->
+          <img src="Images/icons/GitHub_Invertocat_Dark.svg" alt="GitHub" class="link-icon"> GitHub Repository
+        </a>
+      </li>
+
+      <li data-brand="kofi">
+        <a href="https://ko-fi.com/post/Toy-Path-My-first-shipped-game-Q5Q31NIIRL" target="_kofi" rel="noopener">
+          <img src="Images/icons/kofi_symbol.svg" alt="Ko-fi" class="link-icon"> Support on Ko-fi
+        </a>
+      </li>
+
+      <li data-brand="patreon">
+        <a href="https://www.patreon.com/posts/toy-path-my-game-142478793" target="_patreon" rel="noopener">
+          <img src="Images/icons/PATREON_SYMBOL_1_BLACK_RGB.svg" alt="Patreon" class="link-icon"> Patreon
+        </a>
+      </li>
+
+      <li data-brand="BMaC">
+        <a href="https://buymeacoffee.com/bytecoder/toy-path-my-first-shipped-game" target="_bmac" rel="noopener">
+          <img src="Images/icons/bmc-logo.svg" alt="Buy Me a Coffee" class="link-icon"> Buy Me a Coffee
+        </a>
+      </li>
+    </ul>
+
+  </section>
 </main>
-<footer>
-  <nav>
-    <a href="index.html">← Back to Projects</a> |
-    <a href="respContact.html">Contact Me</a> |
-    <a href="https://linkedin.com/in/david-riley-08a57551" target="_blank">LinkedIn</a> |
-    <a href="https://github.com/Gatene1" target="_blank">GitHub</a> |
-    <a href="https://ko-fi.com/thedavid" target="_blank">Ko-fi</a>
-  </nav>
-  <p>&copy; 2025 David Riley / Outbox Games</p>
-</footer>
-    <script lang="JavaScript" src="respPortfolio.js?v=1.0.1"></script>
+<!-- place near the end of <body> on every page -->
+<div data-include="Partials/respFooter.html"></div>
+
+<script lang="JavaScript" src="respPortfolio.js?v=1.0.1"></script>
+
+<!-- place near the end of <body> on every page -->
+<script type="module">
+  async function includePartials() {
+    const nodes = document.querySelectorAll('[data-include]');
+    for (const el of nodes) {
+      const url = el.getAttribute('data-include');
+      const res = await fetch(url, { cache: 'no-store' });
+      el.outerHTML = await res.text();
+    }
+    // footer init runs AFTER the HTML is in the page
+    const y = document.getElementById('y');
+    if (y) y.textContent = new Date().getFullYear();
+  }
+  includePartials();
+</script>
+
 </body>
 </html>

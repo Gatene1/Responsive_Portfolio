@@ -318,6 +318,87 @@ footer nav a:hover { text-decoration: underline; }
 
 
 
+/* --- Brand-tinted link tiles --- */
+.link-list {
+    list-style:none;
+    padding:0;
+    margin:1rem 0 2rem;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:1rem 1.25rem;
+}
+
+.link-list li {
+    position:relative;
+    background: var(--listItems);           /* your existing gray */
+    border-radius:8px;
+    padding:0.5rem 0.9rem;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;
+    border:1px solid rgba(0,0,0,.06);       /* subtle edge */
+}
+
+/* Set brand color variable per item */
+.link-list li[data-brand="github"]  { --brand: #171515; } /* GitHub black */
+.link-list li[data-brand="play"]    { --brand: #10b981; } /* play/link green (Tailwind emerald-ish) */
+.link-list li[data-brand="kofi"]    { --brand: #ff5e5b; } /* Ko-fi coral */
+.link-list li[data-brand="patreon"] { --brand: #ff424d; } /* Patreon coral-red */
+.link-list li[data-brand="BMaC"] { --brand: #ffdd00; } /* BMaC Yellow */
+
+/* Hover / focus glow using brand color */
+.link-list li:hover,
+.link-list li:focus-within {
+    transform: translateY(-2px);
+    box-shadow:
+            0 6px 14px rgba(0,0,0,.18),
+            0 0 0 3px color-mix(in oklab, var(--brand), transparent 82%);
+    background:
+            linear-gradient(
+                    to bottom,
+                    color-mix(in oklab, var(--brand), transparent 92%),
+                    color-mix(in oklab, var(--brand), transparent 96%)
+            ),
+            var(--listItems);
+    border-color: color-mix(in oklab, var(--brand), transparent 78%);
+}
+
+.link-list a {
+    display:flex;
+    align-items:center;
+    gap:.55rem;
+    color:inherit;
+    text-decoration:none;
+    font-weight:700;
+    letter-spacing:.01em;
+}
+
+.link-icon {
+    width:28px; height:28px; flex-shrink:0;
+    /* If your SVGs inherit currentColor, they’ll tint slightly with the brand on hover */
+}
+
+@media (max-width:600px) {
+    .link-icon { width:24px; height:24px; }
+}
+
+/* Keyboard focus clarity on the anchor itself */
+.link-list a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .link-list li { transition: none; }
+}
+
+
+
+
+.legal{opacity:.7;margin:.75rem 0 0}
+
+
+
 .model-gallery {
     display: flex;
     flex-wrap: wrap;

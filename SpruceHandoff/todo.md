@@ -7,9 +7,9 @@
 * \[✴️] Add Blog to the site.
 * \[✴️] Add other social and crowdfunding sites to site
 * \[✴️] Add Captcha to the Contact Me
-* \[✴️] Add Conglomerates (Glean, Game Jams, Tools, and Games)
-* \[✴️] Add Toy Path to main page's project list.
-* \[✴️] Keep SpriteGrid on the main page's project list.
+* \[✅] Add Conglomerates (Glean, Game Jams, Tools, and Games)
+* \[✅] Add Toy Path to main page's project list.
+* \[✅] Keep SpriteGrid on the main page's project list.
 
 
 
