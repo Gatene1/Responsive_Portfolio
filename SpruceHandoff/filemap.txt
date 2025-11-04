@@ -14,6 +14,7 @@ D:.
 ¦   projects.html
 ¦   README.md
 ¦   respContact.html
+¦   respHeaderMenu.js
 ¦   respIndex.css
 ¦   respPortfolio.js
 ¦   respSite_Proj.html
@@ -66,8 +67,11 @@ D:.
 ¦   ¦   wineBottleSm.png
 ¦   ¦   
 ¦   +---icons
+¦           bmc-logo.svg
+¦           gamepad.svg
 ¦           GitHub_Invertocat_Dark.svg
 ¦           GitHub_Invertocat_Light.svg
+¦           joystick.svg
 ¦           kofi_symbol.svg
 ¦           PATREON_SYMBOL_1_BLACK_RGB.svg
 ¦           play.svg
@@ -81,6 +85,10 @@ D:.
 ¦       picnictable.html
 ¦       picnic_scene.html
 ¦       winebottle.html
+¦       
++---Partials
+¦       respFooter.html
+¦       respHeader.html
 ¦       
 +---PHPMailer-master
 ¦   ¦   COMMITMENT

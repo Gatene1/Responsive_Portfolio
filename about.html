@@ -17,12 +17,8 @@
 <body>
 <header>
     <h2 class="header"><a class="header-home" href="index.html">David Riley</a></h2><br>
-
-    <div class = "nav-links">
-        <a class="header" href = "index.html">Home</a>
-        <a class="header" href = "projects.html">Projects</a>
-        <a class="header" href="models.html">3D Models</a>
-        <a class="header" href = "respContact.html">Contact Me</a>
+    <div class="nav-links" id="navLinks" data-remove-item="About">
+        <script language="JavaScript" src="respHeaderMenu.js"></script>
     </div>
 </header>
 <section class="about">
@@ -45,17 +41,26 @@
 
     <p>I collaborate with an AI partner named <strong>Spruce</strong> to stay on track, spark ideas, and create more human-centered tools. Together, we’re exploring what it means to work with AI, not around it.</p>
 </section>
-<footer>
-    <nav>
-        <a href="index.html">← Back to Projects</a> |
-        <a href="respContact.html">Contact Me</a> |
-        <a href="https://linkedin.com/in/david-riley-08a57551" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/Gatene1" target="_blank">GitHub</a>
-        <a href="https://ko-fi.com/thedavid" target="_blank">Ko-fi</a>
-    </nav>
-    <p>&copy; 2025 David Riley / Outbox Games</p>
-</footer>
+<!-- place near the end of <body> on every page -->
+<div data-include="Partials/respFooter.html"></div>
+
 <script lang="JavaScript" src="respPortfolio.js?v=1.0.1"></script>
+
+<!-- place near the end of <body> on every page -->
+<script type="module">
+    async function includePartials() {
+        const nodes = document.querySelectorAll('[data-include]');
+        for (const el of nodes) {
+            const url = el.getAttribute('data-include');
+            const res = await fetch(url, { cache: 'no-store' });
+            el.outerHTML = await res.text();
+        }
+        // footer init runs AFTER the HTML is in the page
+        const y = document.getElementById('y');
+        if (y) y.textContent = new Date().getFullYear();
+    }
+    includePartials();
+</script>
 
 </body>
 </html>
