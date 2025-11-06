@@ -1,7 +1,7 @@
 :root { --bg-color: #f7f7f7; --text-color: #444444; --accent-color: #7c3aed; --card-bg: #1e1e1e;
     --listItems: rgba(170, 170, 170, 0.8); --bg: 0 0% 8%; --fg: 0 0% 98%; --chip-backdrop: blur(8px) saturate(110%);
     --chip-alpha: 0.12; /* glassy */ --chip-border: 0.35; --gl: 152 60% 30%; --jj: 220 65% 50%; --tl: 355 70% 48%;
-    --gm: 260 55% 52%; }
+    --gm: 260 55% 52%; --ogLogoScale: 1.7; }
 
 body { margin: 0; padding: 0; padding-bottom: 60px; background-color: var(--bg-color); color: var(--text-color);
        accent-color: var(--accent-color); display: flex; flex-direction: column; min-height: 100vh;
@@ -336,6 +336,7 @@ footer nav a:hover { text-decoration: underline; }
     padding:0.5rem 0.9rem;
     transition: transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease;
     border:1px solid rgba(0,0,0,.06);       /* subtle edge */
+    align-content: center;
 }
 
 /* Set brand color variable per item */
@@ -344,6 +345,7 @@ footer nav a:hover { text-decoration: underline; }
 .link-list li[data-brand="kofi"]    { --brand: #ff5e5b; } /* Ko-fi coral */
 .link-list li[data-brand="patreon"] { --brand: #ff424d; } /* Patreon coral-red */
 .link-list li[data-brand="BMaC"] { --brand: #ffdd00; } /* BMaC Yellow */
+.link-list li[data-brand="OGBlog"] { --brand: #008800; } /* OutBox Games Blog Dark Green */
 
 /* Hover / focus glow using brand color */
 .link-list li:hover,
@@ -376,6 +378,11 @@ footer nav a:hover { text-decoration: underline; }
     width:28px; height:28px; flex-shrink:0;
     /* If your SVGs inherit currentColor, they’ll tint slightly with the brand on hover */
 }
+
+/* temporary visual equalizers */
+
+.link-list li[data-brand="OGBlog"] .link-icon { transform: scale(var(--ogLogoScale)); }
+.link-icon { transform-origin: center; display:inline-block; }
 
 @media (max-width:600px) {
     .link-icon { width:24px; height:24px; }

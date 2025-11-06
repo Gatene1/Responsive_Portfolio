@@ -99,3 +99,9 @@ Updated verbiage in the project Webpages and the main Webpage to catch the eyes 
 - Added new files for reusing footers and some headers, to not update each file all the time.
 - Reconfigured the header file in the "Partials" directory to be more legible, and work for each page.
 - Finished copying over each header and footer replacement code and external files to each Webpage.
+
+# 11/5/2025 - 11/6/2025
+- Finished adding blog posts for the three major projects.
+- Added "Status" and "Next Steps" descriptions to each major project.
+- Fixed SVG resize error where they didn't resize properly.
+- Added pill-shaped link buttons to all major projects.

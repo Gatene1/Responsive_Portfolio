@@ -7,7 +7,7 @@
   <meta name="reply-to"    content="Gatene1@iCloud.com">
   <meta charset = "UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
-  <link rel="stylesheet" type="text/css" href="respIndex.css?v=<?= Date.now() ?>">
+  <link rel="stylesheet" type="text/css" href="respIndex.css">
   <link rel="icon" href="Images/favicon.ico">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
@@ -152,19 +152,25 @@
 
       <li data-brand="kofi">
         <a href="https://ko-fi.com/post/Toy-Path-My-first-shipped-game-Q5Q31NIIRL" target="_kofi" rel="noopener">
-          <img src="Images/icons/kofi_symbol.svg" alt="Ko-fi" class="link-icon"> Support on Ko-fi
+          <img src="Images/icons/kofi_symbol.svg" alt="Ko-fi" class="link-icon"> Ko-fi Page
         </a>
       </li>
 
       <li data-brand="patreon">
         <a href="https://www.patreon.com/posts/toy-path-my-game-142478793" target="_patreon" rel="noopener">
-          <img src="Images/icons/PATREON_SYMBOL_1_BLACK_RGB.svg" alt="Patreon" class="link-icon"> Patreon
+          <img src="Images/icons/PATREON_SYMBOL_1_BLACK_RGB.svg" alt="Patreon" class="link-icon"> Patreon Page
         </a>
       </li>
 
       <li data-brand="BMaC">
         <a href="https://buymeacoffee.com/bytecoder/toy-path-my-first-shipped-game" target="_bmac" rel="noopener">
-          <img src="Images/icons/bmc-logo.svg" alt="Buy Me a Coffee" class="link-icon"> Buy Me a Coffee
+          <img src="Images/icons/bmc-logo.svg" alt="Buy Me a Coffee" class="link-icon"> Buy Me a Coffee Page
+        </a>
+      </li>
+
+      <li data-brand="OGBlog">
+        <a href="https://outboxgames.com/blog/index.php/2025/11/04/toy-path" target="_ogblog" rel="noopener">
+          <img src="Images/icons/outboxgames.svg" alt="OutBox Games Blog Post for Toy Path" class="link-icon"> OutBox Games Blog
         </a>
       </li>
     </ul>
@@ -187,7 +193,7 @@
     }
     // footer init runs AFTER the HTML is in the page
     const y = document.getElementById('y');
-    if (y) y.textContent = new Date().getFullYear();
+    if (y) y.textContent = new Date().getFullYear().toString();
   }
   includePartials();
 </script>
