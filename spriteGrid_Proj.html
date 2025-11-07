@@ -54,9 +54,11 @@
   </section>
 
   <!-- Spruce's Image Modal -->
-  <div id="imgModal" class="modal">
-    <span class="modal-bg"></span>
-    <img id="modalImg" src="" alt="Expanded View">
+  <div id="imgModal" class="modal" aria-hidden="true">
+    <span class="modal-bg" aria-hidden="true"></span>
+    <div class="modal-inner">
+      <img id="modalImg" src="" alt="Expanded View">
+    </div>
   </div>
   <!-- End Spruce's Image Modal -->
 
@@ -133,7 +135,7 @@
 <!-- place near the end of <body> on every page -->
 <div data-include="Partials/respFooter.html"></div>
 
-<script lang="JavaScript" src="respPortfolio.js?v=1.0.1"></script>
+<script lang="JavaScript" src="respPortfolio.js"></script>
 
 <!-- place near the end of <body> on every page -->
 <script type="module">
@@ -146,7 +148,7 @@
     }
     // footer init runs AFTER the HTML is in the page
     const y = document.getElementById('y');
-    if (y) y.textContent = new Date().getFullYear();
+    if (y) y.textContent = new Date().getFullYear().toString();
   }
   includePartials();
 </script>

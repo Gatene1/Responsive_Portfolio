@@ -19,11 +19,55 @@ Object.entries(projectRoutes).forEach(([cardId, url]) => {
     }
 });
 
-const modal = document.getElementById("imgModal");
-const modalImg = document.getElementById("modalImg");
-const modalBG = document.querySelector(".modal-bg");
+document.addEventListener("DOMContentLoaded", () => {
+    const modal      = document.getElementById("imgModal");
+    const modalImg   = document.getElementById("modalImg");
+    const modalBG    = modal?.querySelector(".modal-bg");
+    const modalInner = modal?.querySelector(".modal-inner");
 
-document.querySelectorAll(".image-gallery img").forEach(img => {
+    if (!modal || !modalImg || !modalInner) return;
+
+    const openModal = (src, alt, clickY) => {
+        const vh = window.innerHeight;
+        // Find a nice offset: center around click, clamped
+        const offsetPx = Math.max(40, Math.min(clickY - vh * 0.4, vh * 0.3));
+
+        modalInner.style.setProperty("--modal-offset", offsetPx + "px");
+
+        modalImg.src = src;
+        modalImg.alt = alt || "Expanded view";
+        modal.style.display = "flex";
+        document.body.classList.add("modal-open");
+    };
+
+    const closeModal = () => {
+        modal.style.display = "none";
+        modalImg.src = "";
+        document.body.classList.remove("modal-open");
+    };
+
+    document.querySelectorAll(".image-gallery img").forEach(img => {
+        img.addEventListener("click", (e) => {
+            openModal(img.src, img.alt, e.clientY);
+        });
+    });
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal || e.target === modalImg || e.target === modalBG) {
+            closeModal();
+        }
+    });
+
+    window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.style.display === "flex") {
+            closeModal();
+        }
+    });
+});
+
+
+
+/*document.querySelectorAll(".image-gallery img").forEach(img => {
     img.addEventListener("click", () => {
         modalImg.src = img.src;
         modal.style.display = "flex";
@@ -37,7 +81,7 @@ if (modalBG)
 if (modalImg)
     modalImg.addEventListener("click", () => {
         modal.style.display = "none";
-    });
+    });*/
 
 
 // === Spruce's Category Filter ===
@@ -72,7 +116,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("DOMContentLoaded", () => {
     const versionTag = `v=${Date.now()}`;
-
     // Update all image srcs
     document.querySelectorAll("img").forEach(img => {
         const src = img.getAttribute("src");
@@ -96,23 +139,23 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 
 
+
+
     // === Spruce: Auto "NEW" badge for recent projects ===
-// Shows a starburst on cards published within the last N days.
-    (function markNewProjects(daysFresh = 21){
+// Uses data-published to add the .is-new class so CSS can show the starburst.
+    (function markNewProjects(daysFresh = 21) {
         const now = new Date();
         document.querySelectorAll('.project-card').forEach(card => {
             const iso = card.getAttribute('data-published');
             if (!iso) return;
+
             const published = new Date(iso + 'T00:00:00');
-            const diffDays = Math.floor((now - published) / (1000*60*60*24));
+            const diffDays = Math.floor(
+                (now - published) / (1000 * 60 * 60 * 24)
+            );
+
             if (diffDays <= daysFresh) {
-                if (!card.querySelector('.burst-new')) {
-                    const badge = document.createElement('span');
-                    badge.className = 'burst-new';
-                    badge.setAttribute('aria-label','New project');
-                    badge.setAttribute('title','New');
-                    card.appendChild(badge);
-                }
+                card.classList.add('is-new');
             }
         });
     })();

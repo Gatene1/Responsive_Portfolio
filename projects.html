@@ -127,9 +127,9 @@
             <!--            <p>My portfolio site made with my AI Partner.</p>-->
         </article>
 
-        <article class="project-card is-new" id="card6" data-group="glean" data-published="2025-10-27">
+        <article class="project-card" id="card6" data-group="glean" data-published="2025-10-27">
             <div class="thumb-wrapper">
-                <img src="Images/lvl3SShot.png" alt="Toy Path v1.0" />
+                <img src="Images/Lvl3SShot.png" alt="Toy Path v1.0" />
                 <div class="badge version" title="The first installment in Glean. A puzzle where breathing is everything.">
                     v1.0 Complete!
                 </div>
@@ -148,7 +148,7 @@
 <!-- place near the end of <body> on every page -->
 <div data-include="Partials/respFooter.html"></div>
 
-<script lang="JavaScript" src="respPortfolio.js?v=1.0.1"></script>
+<script lang="JavaScript" src="respPortfolio.js"></script>
 
 <!-- place near the end of <body> on every page -->
 <script type="module">
@@ -161,7 +161,7 @@
         }
         // footer init runs AFTER the HTML is in the page
         const y = document.getElementById('y');
-        if (y) y.textContent = new Date().getFullYear();
+        if (y) y.textContent = new Date().getFullYear().toString();
     }
     includePartials();
 </script>

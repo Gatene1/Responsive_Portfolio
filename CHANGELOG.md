@@ -105,3 +105,7 @@ Updated verbiage in the project Webpages and the main Webpage to catch the eyes 
 - Added "Status" and "Next Steps" descriptions to each major project.
 - Fixed SVG resize error where they didn't resize properly.
 - Added pill-shaped link buttons to all major projects.
+
+# 11/7/2025
+- Addressed bug for the picture viewer. I still haven't fixed it completely, but now user can scroll to view the picture, and the viewer takes up the whole Webpage.
+- Removed the action cards for "PatternChooser" and "Mechanic Verber". Will add those back as the tools are available.

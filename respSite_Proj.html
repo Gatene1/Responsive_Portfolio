@@ -69,7 +69,7 @@
 <!-- place near the end of <body> on every page -->
 <div data-include="Partials/respFooter.html"></div>
 
-<script lang="JavaScript" src="respPortfolio.js?v=1.0.1"></script>
+<script lang="JavaScript" src="respPortfolio.js"></script>
 
 <!-- place near the end of <body> on every page -->
 <script type="module">
@@ -82,7 +82,7 @@
         }
         // footer init runs AFTER the HTML is in the page
         const y = document.getElementById('y');
-        if (y) y.textContent = new Date().getFullYear();
+        if (y) y.textContent = new Date().getFullYear().toString();
     }
     includePartials();
 </script>
