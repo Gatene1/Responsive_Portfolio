@@ -109,3 +109,8 @@ Updated verbiage in the project Webpages and the main Webpage to catch the eyes 
 # 11/7/2025
 - Addressed bug for the picture viewer. I still haven't fixed it completely, but now user can scroll to view the picture, and the viewer takes up the whole Webpage.
 - Removed the action cards for "PatternChooser" and "Mechanic Verber". Will add those back as the tools are available.
+
+# 11/11/2025
+- Added the project page for PatternChooser.
+- Added a Trello board capsule-style link for the links section of a project page.
+- Updated the Index.html and projects.html pages to show PatternChooser.

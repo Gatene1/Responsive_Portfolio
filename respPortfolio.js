@@ -7,7 +7,8 @@ const projectRoutes = {
     "card3": "booska_Proj.html?v=" + Date.now(),
     "card4": "blink_Proj.html?v=" + Date.now(),
     "card5": "respSite_Proj.html?v=" + Date.now(),
-    "card6": "toy_Proj.html?v=" + Date.now()
+    "card6": "toy_Proj.html?v=" + Date.now(),
+    "card7": "pc_Proj.html?v=" + Date.now()
 };
 
 Object.entries(projectRoutes).forEach(([cardId, url]) => {

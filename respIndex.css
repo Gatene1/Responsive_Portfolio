@@ -1,5 +1,6 @@
 :root { --bg-color: #f7f7f7; --text-color: #444444; --accent-color: #7c3aed; --card-bg: #1e1e1e;
     --listItems: rgba(170, 170, 170, 0.8); --bg: 0 0% 8%; --fg: 0 0% 98%; --chip-backdrop: blur(8px) saturate(110%);
+    --listDisabledItems: rgba(90, 90, 90, 0.8);
     --chip-alpha: 0.12; /* glassy */ --chip-border: 0.35; --gl: 152 60% 30%; --jj: 220 65% 50%; --tl: 355 70% 48%;
     --gm: 260 55% 52%; --ogLogoScale: 1.7; }
 
@@ -56,6 +57,8 @@ a:visited.header-home { color: white; text-decoration: none; }
     gap: 1rem; }
 .about li { background: var(--listItems); padding: 0.5rem 1rem; border-radius: 8px; font-weight: bold;
     text-align: center; }
+.about li.disabled { background: var(--listDisabledItems); padding: 0.5rem 1rem; border-radius: 8px; font-weight: bold;
+    text-align: center; color: #d7d7d7; }
 .about p { background: rgba(238, 238, 238, 0.8); padding: 0.5rem 1rem; border-radius: 8px; font-weight: bold; }
 
 .about { animation: fadeIn 1s ease-in-out; }
@@ -326,7 +329,7 @@ footer nav a:hover { text-decoration: underline; }
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:1rem 1.25rem;
+
 }
 
 .link-list li {
@@ -346,6 +349,7 @@ footer nav a:hover { text-decoration: underline; }
 .link-list li[data-brand="patreon"] { --brand: #ff424d; } /* Patreon coral-red */
 .link-list li[data-brand="BMaC"] { --brand: #ffdd00; } /* BMaC Yellow */
 .link-list li[data-brand="OGBlog"] { --brand: #008800; } /* OutBox Games Blog Dark Green */
+.link-list li[data-brand="trello"] { --brand: #227ffa; } /* Trello Blue */
 
 /* Hover / focus glow using brand color */
 .link-list li:hover,
