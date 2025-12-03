@@ -114,3 +114,7 @@ Updated verbiage in the project Webpages and the main Webpage to catch the eyes 
 - Added the project page for PatternChooser.
 - Added a Trello board capsule-style link for the links section of a project page.
 - Updated the Index.html and projects.html pages to show PatternChooser.
+
+# 12/3/2025
+- Added an "About David & OutBox Games" section to the index.html landing Webpage.
+- Changed the "v0.5 Complete!" badge on PatternChooser to "v1.0 Complete!" on the landing Webpage.

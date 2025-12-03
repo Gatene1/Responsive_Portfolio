@@ -312,6 +312,16 @@ footer nav a:hover { text-decoration: underline; }
     opacity:1;
 }
 
+
+.tooltipOverride ul {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+
+
 /* Reduce animation if user prefers */
 @media (prefers-reduced-motion: reduce) {
     .tooltip-list .has-tip { transition:none; }
@@ -350,6 +360,7 @@ footer nav a:hover { text-decoration: underline; }
 .link-list li[data-brand="BMaC"] { --brand: #ffdd00; } /* BMaC Yellow */
 .link-list li[data-brand="OGBlog"] { --brand: #008800; } /* OutBox Games Blog Dark Green */
 .link-list li[data-brand="trello"] { --brand: #227ffa; } /* Trello Blue */
+.link-list li[data-brand="itch"]   { --brand: #fa5c5c; } /* Itchy Carnation */
 
 /* Hover / focus glow using brand color */
 .link-list li:hover,
@@ -425,7 +436,7 @@ footer nav a:hover { text-decoration: underline; }
     background:#fafafa;
     box-shadow:0 1px 2px rgba(0,0,0,.05);
     text-align:center;
-    overflow:hidden;
+    overflow: visible;
     font-family:'Segoe UI',sans-serif;
 }
 
@@ -457,6 +468,10 @@ footer nav a:hover { text-decoration: underline; }
 
 /* subtle hover lift */
 .action-card:hover{ transform:translateY(-2px); transition:transform .2s ease; }
+
+
+
+
 
 
 

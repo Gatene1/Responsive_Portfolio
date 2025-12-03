@@ -7,7 +7,7 @@
   <meta name="reply-to"    content="Gatene1@iCloud.com">
   <meta charset = "UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
-  <link rel="stylesheet" type="text/css" href="respIndex.css">
+  <link rel="stylesheet" type="text/css" href="respIndex.css?v=<?= Date.now ?>">
   <link rel="icon" href="Images/favicon.ico">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
@@ -133,7 +133,7 @@
   </section>
 
   <section class="card actionary-prompts" aria-labelledby="actionary-label">
-    <h2 id="actionary-label">Topic Creator Prompt</h2>
+    <h2 id="actionary-label">Topic Creator & PatternChooser Prompts</h2>
     <p class="muted">The Generated inspiration that seeded this project with my tools:</p>
 
     <div class="actionary-grid">
@@ -141,7 +141,52 @@
       <article class="action-card topic">
         <header class="action-header">Topic Creator</header>
         <div class="action-body">
-          <p class="prompts">“Breathe” • “Puzzle” • “Toy Story”</p>
+          <div class="tooltipOverride">
+          <ul>
+            <li>Breathe</li>
+            <li>Puzzle</li>
+            <li>Toy Story</li>
+          </ul>
+            </div>
+        </div>
+      </article>
+      <!-- PatternChooser -->
+      <article class="action-card pattern">
+        <header class="action-header">PatternChooser</header>
+        <div class="action-body">
+          <ul class="tooltip-list">
+            <li class="has-tip" tabindex="0" data-tip="A peaceful pocket where tension drops and the player can breathe. Safe Zones reset the emotional pace and make danger feel sharper when it returns.">
+              Safe Zone
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="Holding an input sustains an ongoing action, such as blocking, aiming, throttling, or continuous fire. The action remains active only while the button is held.">
+              Press and Hold
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="Every step spends a limited resource like breath, stamina, or fuel. Movement itself becomes a budget you have to manage under pressure.">
+              Resource-Limited Movement
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="The world itself runs on rhythms and cycles—bridges, hazards, and exits move or toggle in time, forcing the player to sync their actions with the environment.">
+              Environmental Timing Puzzle
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="Instead of steering actors directly, the player changes the world, rules, or timing and lets the system respond. You influence behavior without giving explicit orders.">
+              Indirect Control
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="Specific tiles or regions of the map are dangerous by their very nature—water, pits, spikes, or patrol routes that punish careless positioning.">
+              Spatial Hazard
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="Failure sends the player back to the start of a short loop instead of erasing long-term progress, encouraging experimentation instead of punishment.">
+              Soft Reset Loop
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="Levels are brief, focused challenges that can be retried quickly. The game’s pacing comes from many small loops instead of a few big ones.">
+              Short-Stage Loop
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="New rules and mechanics appear one at a time, layered on top of what the player already understands, so complexity ramps up without overwhelming them.">
+              Gradual Rule Introduction
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="The game uses simple, clean cues instead of flashy effects—just enough sound, motion, or color to communicate state without visual noise.">
+              Minimalist Feedback
+            </li>
+
+          </ul>
         </div>
       </article>
 <!--

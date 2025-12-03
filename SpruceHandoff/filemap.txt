@@ -11,6 +11,7 @@ D:.
 ¦   index.html
 ¦   LICENSE
 ¦   models.html
+¦   pc_Proj.html
 ¦   projects.html
 ¦   README.md
 ¦   respContact.html
@@ -50,6 +51,7 @@ D:.
 ¦   ¦   favicon.ico
 ¦   ¦   Lvl3SShot.png
 ¦   ¦   LvlSShot.png
+¦   ¦   mainScreen3.png
 ¦   ¦   picnicBasketSm.png
 ¦   ¦   picnicSceneSm.png
 ¦   ¦   picnicTableSm.png
@@ -71,10 +73,14 @@ D:.
 ¦           gamepad.svg
 ¦           GitHub_Invertocat_Dark.svg
 ¦           GitHub_Invertocat_Light.svg
+¦           itchio-logo-textless-black.svg
+¦           itchio-logo-textless-white.svg
 ¦           joystick.svg
 ¦           kofi_symbol.svg
+¦           outboxgames.svg
 ¦           PATREON_SYMBOL_1_BLACK_RGB.svg
 ¦           play.svg
+¦           trello-neutral.svg
 ¦           use.svg
 ¦           
 +---models
@@ -88,7 +94,6 @@ D:.
 ¦       
 +---Partials
 ¦       respFooter.html
-¦       respHeader.html
 ¦       
 +---PHPMailer-master
 ¦   ¦   COMMITMENT
