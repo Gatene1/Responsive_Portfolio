@@ -1,7 +1,7 @@
 :root { --bg-color: #f7f7f7; --text-color: #444444; --accent-color: #7c3aed; --card-bg: #1e1e1e;
     --listItems: rgba(170, 170, 170, 0.8); --bg: 0 0% 8%; --fg: 0 0% 98%; --chip-backdrop: blur(8px) saturate(110%);
     --listDisabledItems: rgba(90, 90, 90, 0.8);
-    --chip-alpha: 0.12; /* glassy */ --chip-border: 0.35; --gl: 152 60% 30%; --jj: 220 65% 50%; --tl: 355 70% 48%;
+    --chip-alpha: 0.12; /* glassy */ --chip-border: 0.35; --wip: 35 84% 37%; --jj: 220 65% 50%; --tl: 355 70% 48%;
     --gm: 260 55% 52%; --ogLogoScale: 1.7; }
 
 body { margin: 0; padding: 0; padding-bottom: 60px; background-color: var(--bg-color); color: var(--text-color);
@@ -107,7 +107,7 @@ footer nav a:hover { text-decoration: underline; }
     background: hsl(var(--tone) / var(--chip-alpha));
 }
 
-.project-card[data-group="glean"] .project-chip { --tone: var(--gl); }
+.project-card[data-group="wip"] .project-chip { --tone: var(--wip); }
 .project-card[data-group="jams"]  .project-chip { --tone: var(--jj); }
 .project-card[data-group="tools"] .project-chip { --tone: var(--tl); }
 .project-card[data-group="games"] .project-chip { --tone: var(--gm); }
@@ -205,13 +205,13 @@ footer nav a:hover { text-decoration: underline; }
 }
 .group-card:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,.15); }
 
-:root{
-    --gl: 152 60% 30%;  /* Glean */
-    --jj: 220 65% 50%;  /* Jams */
-    --tl: 355 70% 48%;  /* Tools */
-    --gm: 260 55% 52%;  /* Games */
-}
-.group-glean { background: hsl(var(--gl) / .25); border-color: hsl(var(--gl) / .5); }
+/*:root{*/
+/*    --wip: 220 60% 30%;  !* wip *!*/
+/*    --jj: 220 65% 50%;  !* Jams *!*/
+/*    --tl: 355 70% 48%;  !* Tools *!*/
+/*    --gm: 260 55% 52%;  !* Games *!*/
+/*}*/
+.group-glean { background: hsl(var(--wip) / .25); border-color: hsl(var(--wip) / .5); }
 .group-jams  { background: hsl(var(--jj) / .25); border-color: hsl(var(--jj) / .5); }
 .group-tools { background: hsl(var(--tl) / .25); border-color: hsl(var(--tl) / .5); }
 .group-games { background: hsl(var(--gm) / .25); border-color: hsl(var(--gm) / .5); }
