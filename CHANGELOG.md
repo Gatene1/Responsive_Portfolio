@@ -118,3 +118,10 @@ Updated verbiage in the project Webpages and the main Webpage to catch the eyes 
 # 12/3/2025
 - Added an "About David & OutBox Games" section to the index.html landing Webpage.
 - Changed the "v0.5 Complete!" badge on PatternChooser to "v1.0 Complete!" on the landing Webpage.
+- Got rid of the Glean badge and data filter.
+- Added the WIP badge and data filter.
+
+# 12/10/2025
+- Added the Ecosystem flavor text and cards
+- Added links to the Ecosystem cards and wired them to their specific subjects in the projects page.
+- Fixed the "Featured Projects" title and subheading that's been bugging me forever, but I kept forgetting about.

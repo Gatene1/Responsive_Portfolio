@@ -63,6 +63,18 @@ a:visited.header-home { color: white; text-decoration: none; }
 
 .about { animation: fadeIn 1s ease-in-out; }
 
+
+
+
+.featured-projects { padding: 2rem 1rem; margin: auto; color: var(--text-color); line-height: 1.6; }
+.fp-h2 { background: rgba(238, 238, 238, 0.8); padding: 0.5rem 1rem; border-radius: 8px; max-width: 800px; margin: 0 auto 1.25rem;
+    color: var(--text-color); text-align: center; font-weight: bolder; text-shadow: 0 0 3px #7c3aed, 0 0 6px #fff; }
+.fp-p { background: rgba(238, 238, 238, 0.8); padding: 0.5rem 1rem; border-radius: 8px; font-weight: bold; max-width: 700px;
+        margin: 0 auto 1.25rem; text-align: center; }
+.fp-btn { display: inline-block; margin: 1rem auto; padding: 0.75rem 1.25rem; background-color: var(--accent-color);
+    color: white; border: none; border-radius: 8px; text-decoration: none; font-weight: bold; max-width: fit-content; }
+
+
 .project-detail { max-width: 800px; margin: auto; padding: 2rem 1rem; line-height: 1.6; }
 .project-detail h1 { font-size: 2rem; margin-bottom: 0.5rem; }
 .project-detail p { background: rgba(238, 238, 238, 0.8); padding: 0.5rem 1rem; border-radius: 8px; font-weight: bolder; }
@@ -472,6 +484,94 @@ footer nav a:hover { text-decoration: underline; }
 
 
 
+/* === OutBox Ecosystem Pillars (homepage) === */
+.pillars {
+    padding: 2rem 1rem 1rem;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pillars h2 {
+    background: rgba(238, 238, 238, 0.9);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    color: var(--text-color);
+    font-weight: bolder;
+    text-shadow: 0 0 3px #7c3aed, 0 0 6px #fff;
+    margin-bottom: 0.75rem;
+}
+
+.pillars-intro {
+    max-width: 700px;
+    margin: 0 auto 1.25rem;
+    background: rgba(238, 238, 238, 0.85);
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.pillar-card {
+    background: rgba(30, 30, 30, 0.96);
+    color: #eee;
+    border-radius: 12px;
+    padding: 1rem 1.1rem 1.25rem;
+    text-align: left;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.pillar-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.pillar-card p {
+    margin: 0 0 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.pillar-link {
+    display: inline-block;
+    margin-top: 0.25rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    background: var(--accent-color);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.pillar-link:hover {
+    text-decoration: underline;
+}
+
+/* === Project groups on projects.html === */
+.project-group {
+    max-width: 980px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+    scroll-margin-top: 6.5rem;
+}
+
+.project-group > h3 {
+    text-align: center;
+    background: rgba(238, 238, 238, 0.9);
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    color: var(--text-color);
+    font-weight: bolder;
+    text-shadow: 0 0 3px #7c3aed, 0 0 6px #fff;
+    margin-bottom: 0.75rem;
+}
 
 
 

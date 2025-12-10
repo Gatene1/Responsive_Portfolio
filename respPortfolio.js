@@ -131,6 +131,7 @@ window.addEventListener("DOMContentLoaded", () => {
         if (
             href &&
             !href.startsWith("#") &&
+            !href.includes("#") &&
             !href.includes("?") &&
             !href.includes("mailto") &&
             !href.includes("youtu.be")
