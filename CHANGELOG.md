@@ -125,3 +125,9 @@ Updated verbiage in the project Webpages and the main Webpage to catch the eyes 
 - Added the Ecosystem flavor text and cards
 - Added links to the Ecosystem cards and wired them to their specific subjects in the projects page.
 - Fixed the "Featured Projects" title and subheading that's been bugging me forever, but I kept forgetting about.
+
+# 12/13/2025
+- Made new favicon for site.
+- renamed all of the titles for the pages for the site to match a pattern
+- Added the footer to each of the 3D models' pages.
+- changed footer to work with the 3D models' pages.

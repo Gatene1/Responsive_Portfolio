@@ -8,11 +8,11 @@
     <meta charset = "UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
     <link rel="stylesheet" type="text/css" href="../respIndex.css?v=<?= Date.now() ?>">
-    <link rel="icon" href="Images/favicon.ico">
+    <link rel="icon" href="../Images/favicon.svg">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <title>The Wine Bottle with Maya</title>
+    <title>Wine Bottle — David Riley</title>
 </head>
 <body>
 <header>
@@ -53,16 +53,27 @@
 
     <p><i>Made in Maya 2016</i></p>
 </main>
-<footer>
-    <nav>
-        <a href="../models.html">← Back to all models</a> |
-        <a href="../respContact.html">Contact Me</a> |
-        <a href="https://linkedin.com/in/david-riley-08a57551" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/Gatene1" target="_blank">GitHub</a> |
-        <a href="https://ko-fi.com/thedavid" target="_blank">Ko-fi</a>
-    </nav>
-    <p>&copy; 2025 David Riley / Outbox Games</p>
-</footer>
+
+<br><br><br><br>
+
+<div data-include="../Partials/respFooter.html"></div>
+
 <script lang="JavaScript" src="../respPortfolio.js?v=1.0.1"></script>
+
+<!-- place near the end of <body> on every page -->
+<script type="module">
+    async function includePartials() {
+        const nodes = document.querySelectorAll('[data-include]');
+        for (const el of nodes) {
+            const url = el.getAttribute('data-include');
+            const res = await fetch(url, { cache: 'no-store' });
+            el.outerHTML = await res.text();
+        }
+        // footer init runs AFTER the HTML is in the page
+        const y = document.getElementById('y');
+        if (y) y.textContent = new Date().getFullYear();
+    }
+    includePartials();
+</script>
 </body>
 </html>
