@@ -7,7 +7,7 @@
     <meta name="reply-to"    content="Gatene1@iCloud.com">
     <meta charset = "UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
-    <link rel="stylesheet" type="text/css" href="respIndex.css?v=<?= Date.now ?>">
+    <link rel="stylesheet" type="text/css" href="respIndex.css?v=<?= filemtime('respIndex.css') ?>">
     <link rel="icon" href="Images/favicon.svg">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -19,7 +19,7 @@
 <header>
     <h2 class="header"><a class="header-home" href="index.html">David Riley</a></h2><br>
     <div class="nav-links" id="navLinks" data-remove-item="Home">
-        <script language="JavaScript" src="respHeaderMenu.js"></script>
+        <script language="JavaScript" src="respHeaderMenu.js?v=<?= filemtime('respHeaderMenu.js') ?>"></script>
     </div>
 </header>
 
@@ -127,7 +127,7 @@
         <article class="project-card" id="card2" data-group="tools">
             <div class = "thumb-wrapper">
                 <img src="Images/SpriteGrid-Temp-Thumb.png" alt="SpriteGrid tile-based editor and character" />
-                <div class="badge version" title="A Finalized and stable build of SpriteGrid ">v3.3 Complete!</div>
+                <div class="badge version" title="A Finalized and stable build of SpriteGrid ">v3.3.1 Complete!</div>
             </div>
             <br clear="all">
             <h3>SpriteGrid</h3>
@@ -162,7 +162,7 @@
 <!-- place near the end of <body> on every page -->
 <div data-include="Partials/respFooter.html"></div>
 
-<script lang="JavaScript" src="respPortfolio.js"></script>
+<script lang="JavaScript" src="respPortfolio.js?v=<?= filemtime('respPortfolio.js') ?>"></script>
 
 <!-- place near the end of <body> on every page -->
 <script type="module">

@@ -7,7 +7,7 @@
     <meta name="reply-to"    content="Gatene1@iCloud.com">
     <meta charset = "UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
-    <link rel="stylesheet" type="text/css" href="respIndex.css?v=<?= Date.now() ?>">
+    <link rel="stylesheet" type="text/css" href="respIndex.css?v=<?= filemtime('respIndex.css') ?>">
     <link rel="icon" href="Images/favicon.svg">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -18,7 +18,7 @@
 <header>
     <h2 class="header"><a class="header-home" href="index.html">David Riley</a></h2><br>
     <div class="nav-links" id="navLinks" data-remove-item="None">
-        <script language="JavaScript" src="respHeaderMenu.js"></script>
+        <script language="JavaScript" src="respHeaderMenu.js?v=<?= filemtime('respHeaderMenu.js') ?>"></script>
     </div>
 </header>
 
@@ -99,27 +99,39 @@
     <section id="links" class="about" aria-labelledby="linksTitle">
         <h2 id="linksTitle">Links</h2>
         <ul class="link-list">
-            <li data-brand="kofi">
-                <a href="https://ko-fi.com/post/Topic-Creator-K3K81J1543" target="_kofi" rel="noopener">
-                    <img src="Images/icons/kofi_symbol.svg" alt="Ko-fi" class="link-icon"> Ko-fi Page
+            <li data-brand="play" title="Download TopicCreator v2.5">
+                <a href="https://outboxgames.com/TopicCreator25.zip" target="_play" rel="noopener" title="Download TopicCreator v2.5">
+                    <img src="Images/icons/joystick.svg" alt="Download TopicCreator v2.5" title="Download TopicCreator v2.5" class="link-icon"> Download TopicCreator
                 </a>
             </li>
 
-            <li data-brand="patreon">
-                <a href="https://www.patreon.com/posts/topic-creator-142562620" target="_patreon" rel="noopener">
-                    <img src="Images/icons/PATREON_SYMBOL_1_BLACK_RGB.svg" alt="Patreon" class="link-icon"> Patreon Page
+            <li data-brand="itch" title="Use and follow me on Itch.io">
+                <a href="https://gatene.itch.io/topic-creator" target="_itch" rel="noopener" title="Use and follow me on Itch.io">
+                    <img src="Images/icons/itchio-logo-textless-black.svg" alt="Use and follow me on Itch.io" title="Use and follow me on Itch.io" class="link-icon"> Itch.io
                 </a>
             </li>
 
-            <li data-brand="BMaC">
-                <a href="https://buymeacoffee.com/bytecoder/topic-creator" target="_bmac" rel="noopener">
-                    <img src="Images/icons/bmc-logo.svg" alt="Buy Me a Coffee" class="link-icon"> Buy Me a Coffee Page
+            <li data-brand="BMaC" title="Buy Me a Coffee">
+                <a href="https://buymeacoffee.com/bytecoder/topic-creator" target="_bmac" rel="noopener" title="Buy Me a Coffee">
+                    <img src="Images/icons/bmc-logo.svg" alt="Buy Me a Coffee"  title="Buy Me a Coffee" class="link-icon"> Buy Me a Coffee Page
                 </a>
             </li>
 
-            <li data-brand="OGBlog">
-                <a href="https://outboxgames.com/blog/index.php/2025/11/06/topic-creator/" target="_ogblog" rel="noopener">
-                    <img src="Images/icons/outboxgames.svg" alt="OutBox Games Blog Post for TopicCreator" class="link-icon"> OutBox Games Blog
+            <li data-brand="kofi" title="My Ko-fi Page">
+                <a href="https://ko-fi.com/post/Topic-Creator-K3K81J1543" target="_kofi" rel="noopener" title="My Ko-fi Page">
+                    <img src="Images/icons/kofi_symbol.svg" alt="My Ko-fi Page" title="My Ko-fi Page" class="link-icon"> Ko-fi Page
+                </a>
+            </li>
+
+            <li data-brand="patreon" title="Patreon">
+                <a href="https://www.patreon.com/posts/topic-creator-142562620" target="_patreon" rel="noopener" title="Patreon">
+                    <img src="Images/icons/PATREON_SYMBOL_1_BLACK_RGB.svg" alt="Patreon" title="Patreon" class="link-icon"> Patreon Page
+                </a>
+            </li>
+
+            <li data-brand="OGBlog" title="OutBox Games Blog Post for TopicCreator">
+                <a href="https://outboxgames.com/blog/index.php/2025/11/06/topic-creator/" target="_ogblog" rel="noopener" title="OutBox Games Blog Post for TopicCreator">
+                    <img src="Images/icons/outboxgames.svg" alt="OutBox Games Blog Post for TopicCreator" title="OutBox Games Blog Post for TopicCreator" class="link-icon"> OutBox Games Blog
                 </a>
             </li>
         </ul>
@@ -129,7 +141,7 @@
 <br><br><br><br>
 <div data-include="Partials/respFooter.html"></div>
 
-<script lang="JavaScript" src="respPortfolio.js"></script>
+<script lang="JavaScript" src="respPortfolio.js?v=<?= filemtime('respPortfolio.js') ?>"></script>
 
 <!-- place near the end of <body> on every page -->
 <script type="module">

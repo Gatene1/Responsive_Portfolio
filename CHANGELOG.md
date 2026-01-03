@@ -131,3 +131,10 @@ Updated verbiage in the project Webpages and the main Webpage to catch the eyes 
 - renamed all of the titles for the pages for the site to match a pattern
 - Added the footer to each of the 3D models' pages.
 - changed footer to work with the 3D models' pages.
+
+# 1/2/2026
+- Updated PatternChooser's project page to reflect project's changes.
+- Updated index.html and projects.html pages to reflect projects' changes.
+- Updated SpriteGrid's project page to reflect v4.0 changes and overall changes in v3.3.1.
+- Updated Title attributes on the crowdfunding/blog/social media data badges across all projects.
+- Finally busted the cache demon that kept CSS and .JS files from loading when I updated them.

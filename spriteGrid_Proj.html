@@ -7,7 +7,7 @@
   <meta name="reply-to"    content="Gatene1@iCloud.com">
   <meta charset = "UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
-  <link rel="stylesheet" type="text/css" href="respIndex.css?v=<?= Date.now() ?>">
+  <link rel="stylesheet" type="text/css" href="respIndex.css?v=<?= filemtime('respIndex.css') ?>">
   <link rel="icon" href="Images/favicon.svg">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
@@ -18,7 +18,7 @@
 <header>
   <h2 class="header"><a class="header-home" href="index.html">David Riley</a></h2><br>
   <div class="nav-links" id="navLinks" data-remove-item="None">
-    <script language="JavaScript" src="respHeaderMenu.js"></script>
+    <script language="JavaScript" src="respHeaderMenu.js?v=<?= filemtime('respHeaderMenu.js') ?>"></script>
   </div>
 </header>
 
@@ -48,7 +48,22 @@
 
     <!-- 📸 Optional: image gallery -->
     <div class="image-gallery">
-      <img src="Images/sg33_Image1.png" alt="SpriteGrid preview" />
+      <img src="Images/sg4_Image1.png" alt="SpriteGrid v4.0 preview" title="SpriteGrid v4.0 preview" />
+                <details class="credit-disclosure">
+                  <summary aria-label="Artwork attribution">ⓘ</summary>
+                  <div class="credit-text">
+                    ⓘ Artwork attribution displayed above the footer.
+                  </div>
+                </details>
+
+                <div class="attribution-text">
+                  &quot;Forest Pathway&quot; Image credited to
+                  <a href="https://x.com/filthydrawings" target="_attribute" rel="noopener">
+                    @FilthyDrawings
+                  </a>
+                </div>
+
+      <img src="Images/sg33_Image1.png" alt="SpriteGrid v3.3.1" title="SpriteGrid v3.3.1" />
       <img src="Images/SpriteGrid-Temp-Thumb.png" alt="Level view" />
     </div>
   </section>
@@ -69,60 +84,76 @@
 
     <h3>Core Features</h3>
     <ul>
-      <li>Custom file formats (.gat, .gss)</li>
+      <li>Custom file formats (.gat, .gss, .gle, .gpt)</li>
       <li>Middle-mouse eyedropper tool</li>
+      <li>Right-mouse button for clearing cells</li>
+      <li>File saving for drawings, color palettes, and spritesheets</li>
+      <li>PNG format support.</li>
       <li>Legacy format support</li>
-      <li>Accessibility options</li>
+      <li>Spritesheet building</li>
     </ul>
 
     <h3>Built With</h3>
     <ul>
       <li>JavaScript, HTML5, CSS</li>
       <li>Canvas API</li>
+      <li>Iro.js Color Picker</li>
       <li>Flexbox for layout</li>
     </ul>
 
-    <p><strong>Status:</strong> v3.3 Complete!</p>
-    <p><strong>Next Steps:</strong> v3.4 will be collaborated completely with my AI partner, Spruce. This time, the level editor will finally make its debut.</p>
+    <p><strong>Status:</strong> v3.3.1 Complete!</p>
+    <p><strong>Next Steps:</strong> v4.0 will be collaborated completely with my AI partner, Spruce. This time, the level editor will finally make its debut.</p>
   </section>
 
   <section id="links" class="about" aria-labelledby="linksTitle">
     <h2 id="linksTitle">Links</h2>
     <ul class="link-list">
-      <li data-brand="play">
-        <a href="https://outboxgames.com/spritegrid/SpriteGrid3.html" target="_play" rel="noopener">
-          <img src="Images/icons/joystick.svg" alt="Play Online" class="link-icon"> Use SpriteGrid
+      <li data-brand="play" title="Use SpriteGrid v3.3.1 Online">
+        <a href="https://outboxgames.com/spritegrid/SpriteGrid3.html" target="_play" rel="noopener" title="Use SpriteGrid v3.3.1 Online">
+          <img src="Images/icons/joystick.svg" alt="Use SpriteGrid v3.3.1 Online" title="Use SpriteGrid v3.3.1 Online" class="link-icon"> Use SpriteGrid
         </a>
       </li>
 
-      <li data-brand="github">
-        <a href="https://github.com/Gatene1/SpriteGridV3" target="_github" rel="noopener">
+      <li data-brand="itch" title="Use and follow me on Itch.io">
+        <a href="https://gatene.itch.io/spritegrid" target="_itch" rel="noopener" title="Use and follow me on Itch.io">
+          <img src="Images/icons/itchio-logo-textless-black.svg" alt="Use and follow me on Itch.io" title="Use and follow me on Itch.io" class="link-icon"> Itch.io
+        </a>
+      </li>
+
+      <li data-brand="BMaC" title="Buy Me a Coffee">
+        <a href="https://buymeacoffee.com/bytecoder/spritegrid" target="_bmac" rel="noopener" title="Buy Me a Coffee">
+          <img src="Images/icons/bmc-logo.svg" alt="Buy Me a Coffee" title="Buy Me a Coffee" class="link-icon"> Buy Me a Coffee Page
+        </a>
+      </li>
+
+      <li data-brand="kofi" title="My Ko-fi Page">
+        <a href="https://ko-fi.com/post/SpriteGrid-v3-4-J3J11IT6D7" target="_kofi" rel="noopener" title="My Ko-fi Page">
+          <img src="Images/icons/kofi_symbol.svg" alt="My Ko-fi Page" title="My Ko-fi Page" class="link-icon"> Ko-fi
+        </a>
+      </li>
+
+      <li data-brand="patreon" title="Patreon">
+        <a href="https://www.patreon.com/posts/spritegrid-142558484" target="_patreon" rel="noopener" title="Patreon">
+          <img src="Images/icons/PATREON_SYMBOL_1_BLACK_RGB.svg" alt="Patreon" title="Patreon" class="link-icon"> Patreon
+        </a>
+      </li>
+
+      <li data-brand="github" title="See SpriteGrid's GitHub Repo (all versions)">
+        <a href="https://github.com/Gatene1/SpriteGridV3" target="_github" rel="noopener" title="See SpriteGrid's GitHub Repo (all versions)">
           <!-- Use SVGs that inherit currentColor (see note below) -->
-          <img src="Images/icons/GitHub_Invertocat_Dark.svg" alt="GitHub" class="link-icon"> GitHub Repository
+          <img src="Images/icons/GitHub_Invertocat_Dark.svg" alt="See SpriteGrid's GitHub Repo (all versions)" title="See SpriteGrid's GitHub Repo (all versions)" class="link-icon"> GitHub Repository
         </a>
       </li>
 
-      <li data-brand="kofi">
-        <a href="https://ko-fi.com/post/SpriteGrid-v3-4-J3J11IT6D7" target="_kofi" rel="noopener">
-          <img src="Images/icons/kofi_symbol.svg" alt="Ko-fi" class="link-icon"> Ko-fi Page
+      <li data-brand="OGBlog" title="OutBox Games Blog Post for SpriteGrid">
+        <a href="https://outboxgames.com/blog/index.php/2025/11/06/spritegrid/" target="_ogblog" rel="noopener" title="OutBox Games Blog Post for SpriteGrid">
+          <img src="Images/icons/outboxgames.svg" alt="OutBox Games Blog Post for SpriteGrid" title="OutBox Games Blog Post for SpriteGrid" class="link-icon"> OutBox Games Blog
         </a>
       </li>
 
-      <li data-brand="patreon">
-        <a href="https://www.patreon.com/posts/spritegrid-142558484" target="_patreon" rel="noopener">
-          <img src="Images/icons/PATREON_SYMBOL_1_BLACK_RGB.svg" alt="Patreon" class="link-icon"> Patreon Page
-        </a>
-      </li>
-
-      <li data-brand="BMaC">
-        <a href="https://buymeacoffee.com/bytecoder/spritegrid" target="_bmac" rel="noopener">
-          <img src="Images/icons/bmc-logo.svg" alt="Buy Me a Coffee" class="link-icon"> Buy Me a Coffee Page
-        </a>
-      </li>
-
-      <li data-brand="OGBlog">
-        <a href="https://outboxgames.com/blog/index.php/2025/11/06/spritegrid/" target="_ogblog" rel="noopener">
-          <img src="Images/icons/outboxgames.svg" alt="OutBox Games Blog Post for SpriteGrid" class="link-icon"> OutBox Games Blog
+      <li data-brand="trello" title="Trello board for SpriteGrid v4.0">
+        <a href="https://trello.com/b/MKL3QHcw/spritegrid4" target="_trello" rel="noopener" title="Trello board for SpriteGrid v4.0">
+          <img src="Images/icons/trello-neutral.svg" alt="Trello board for SpriteGrid v4.0" title="Trello board for SpriteGrid v4.0" class="link-icon"> Trello Board
         </a>
       </li>
     </ul>
@@ -136,7 +167,7 @@
 <br><br><br><br>
 <div data-include="Partials/respFooter.html"></div>
 
-<script lang="JavaScript" src="respPortfolio.js"></script>
+<script lang="JavaScript" src="respPortfolio.js?v=<?= filemtime('respPortfolio.js') ?>"></script>
 
 <!-- place near the end of <body> on every page -->
 <script type="module">

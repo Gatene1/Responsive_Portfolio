@@ -7,7 +7,7 @@
   <meta name="reply-to"    content="Gatene1@iCloud.com">
   <meta charset = "UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
-  <link rel="stylesheet" type="text/css" href="respIndex.css?v=<?= Date.now ?>">
+  <link rel="stylesheet" type="text/css" href="respIndex.css?v=<?= filemtime('respIndex.css') ?>">
   <link rel="icon" href="Images/favicon.svg">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
@@ -19,7 +19,7 @@
 <header>
   <h2 class="header"><a class="header-home" href="index.html">David Riley</a></h2><br>
   <div class="nav-links" id="navLinks" data-remove-item="none">
-    <script language="JavaScript" src="respHeaderMenu.js"></script>
+    <script language="JavaScript" src="respHeaderMenu.js?v=<?= filemtime('respHeaderMenu.js') ?>"></script>
   </div>
 </header>
 
@@ -36,7 +36,8 @@
     </div>
 
     <div class="image-gallery">
-      <img src="Images/mainScreen3.png" alt="Generated image of GUI for the main page." />
+      <img src="Images/patternChooser2.png" alt="4 popular pattern cards." title="4 popular pattern cards." />
+      <img src="Images/mainScreen3.png" alt="Generated image of GUI for the main page." title="Generated image of GUI for the main page." />
     </div>
   </section>
 
@@ -76,8 +77,8 @@
       </li>
     </ul>
 
-    <p><strong>Status:</strong> v0.5 has been released with 16 patterns!</p>
-    <p><strong>Next Steps:</strong> Continue adding patterns to get to v1.0 @ 50 patterns.</p>
+    <p><strong>Status:</strong> v1.0 has been released with 50 patterns!</p>
+    <p><strong>Next Steps:</strong> Continue adding patterns to get to v1.5 @ 100 patterns.</p>
   </section>
 
   <a name="Links"></a>
@@ -86,52 +87,52 @@
     <h2 id="linksTtile">Links</h2>
     <ul class="link-list">
 
-      <li data-brand="play">
-        <a href="https://outboxgames.com/pcindex.html" target="_play" rel="noopener">
-          <img src="Images/icons/joystick.svg" alt="Play Online" class="link-icon"> Use PatternChooser
+      <li data-brand="play" title="Use PatternChooser Online">
+        <a href="https://outboxgames.com/pcindex.html" target="_play" rel="noopener" title="Use PatternChooser Online">
+          <img src="Images/icons/joystick.svg" alt="Use PatternChooser Online" title="Use PatternChooser Online" class="link-icon"> Use PatternChooser
         </a>
       </li>
 
-        <li data-brand="itch">
-            <a href="https://gatene.itch.io/patternchooser" target="_itch" rel="noopener">
+        <li data-brand="itch" title="Play and follow me on Itch.io">
+            <a href="https://gatene.itch.io/patternchooser" target="_itch" rel="noopener" title="Play and follow me on Itch.io">
                 <img src="Images/icons/itchio-logo-textless-black.svg" alt="Play and follow me on Itch.io" class="link-icon"> Itch.io
             </a>
         </li>
 
-      <li data-brand="BMaC">
-        <a href="https://buymeacoffee.com/bytecoder/devlog-patternchooser" target="_bmac" rel="noopener">
-          <img src="Images/icons/bmc-logo.svg" alt="Buy Me a Coffee" class="link-icon"> Buy Me a Coffee
+      <li data-brand="BMaC" title="Buy Me a Coffee">
+        <a href="https://buymeacoffee.com/bytecoder/devlog-patternchooser" target="_bmac" rel="noopener" title="Buy Me a Coffee">
+          <img src="Images/icons/bmc-logo.svg" alt="Buy Me a Coffee" title="Buy Me a Coffee" class="link-icon"> Buy Me a Coffee
         </a>
       </li>
 
-      <li data-brand="kofi">
-        <a href="https://ko-fi.com/Post/Devlog-PatternChooser-Ignite-O4O11OX2LG" target="_kofi" rel="noopener">
-          <img src="Images/icons/kofi_symbol.svg" alt="Ko-fi" class="link-icon"> Ko-fi
+      <li data-brand="kofi" title="My Ko-fi Page">
+        <a href="https://ko-fi.com/Post/Devlog-PatternChooser-Ignite-O4O11OX2LG" target="_kofi" rel="noopener" title="My Ko-fi Page">
+          <img src="Images/icons/kofi_symbol.svg" alt="My Ko-fi Page" title="My Ko-fi Page" class="link-icon"> Ko-fi
         </a>
       </li>
 
-      <li data-brand="patreon">
-        <a href="https://www.patreon.com/posts/143170840" target="patreon" rel="noopener">
-          <img src="Images/icons/PATREON_SYMBOL_1_BLACK_RGB.svg" alt="Patreon" class="link-icon"> Patreon
+      <li data-brand="patreon" title="Patreon">
+        <a href="https://www.patreon.com/posts/143170840" target="patreon" rel="noopener" title="Patreon">
+          <img src="Images/icons/PATREON_SYMBOL_1_BLACK_RGB.svg" alt="Patreon" title="Patreon" class="link-icon"> Patreon
         </a>
       </li>
 
-      <li data-brand="github">
-        <a href="https://github.com/Gatene1/PatternChooser" target="_github" rel="noopener">
+      <li data-brand="github" title="See PatternChooser's GitHub Repo">
+        <a href="https://github.com/Gatene1/PatternChooser" target="_github" rel="noopener" title="See PatternChooser's GitHub Repo">
           <!-- Use SVGs that inherit currentColor (see note below) -->
-          <img src="Images/icons/GitHub_Invertocat_Dark.svg" alt="GitHub" class="link-icon"> GitHub Repository
+          <img src="Images/icons/GitHub_Invertocat_Dark.svg" alt="See PatternChooser's GitHub Repo" title="See PatternChooser's GitHub Repo" class="link-icon"> GitHub Repository
         </a>
       </li>
 
-      <li data-brand="OGBlog">
-        <a href="https://outboxgames.com/blog/index.php/2025/11/11/patternchooser/" target="_ogblog" rel="noopener">
-          <img src="Images/icons/outboxgames.svg" alt="OutBox Games Blog Post for PatternChooser" class="link-icon"> OutBox Games Blog
+      <li data-brand="OGBlog" title="OutBox Games Blog Post for PatternChooser">
+        <a href="https://outboxgames.com/blog/index.php/2025/11/11/patternchooser/" target="_ogblog" rel="noopener" title="OutBox Games Blog Post for PatternChooser">
+          <img src="Images/icons/outboxgames.svg" alt="OutBox Games Blog Post for PatternChooser" title="OutBox Games Blog Post for PatternChooser" class="link-icon"> OutBox Games Blog
         </a>
       </li>
 
-      <li data-brand="trello">
-        <a href="https://trello.com/b/a9w2nHHC/patternchooser" target="_trello" rel="noopener">
-          <img src="Images/icons/trello-neutral.svg" alt="Trello board for PatternChooser" class="link-icon"> Trello Board
+      <li data-brand="trello" title="Trello board for PatternChooser">
+        <a href="https://trello.com/b/a9w2nHHC/patternchooser" target="_trello" rel="noopener" title="Trello board for PatternChooser">
+          <img src="Images/icons/trello-neutral.svg" alt="Trello board for PatternChooser" title="Trello board for PatternChooser" class="link-icon"> Trello Board
         </a>
       </li>
     </ul>
@@ -142,7 +143,7 @@
 <br><br><br><br>
 <div data-include="Partials/respFooter.html"></div>
 
-<script lang="JavaScript" src="respPortfolio.js"></script>
+<script lang="JavaScript" src="respPortfolio.js?v=<?= filemtime('respPortfolio.js') ?>"></script>
 
 <!-- place near the end of <body> on every page -->
 <script type="module">

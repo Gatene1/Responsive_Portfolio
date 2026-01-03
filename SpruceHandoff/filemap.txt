@@ -48,7 +48,8 @@ D:.
 ¦   ¦   booska_Image3.png
 ¦   ¦   cabinkey.png
 ¦   ¦   canteen.png
-¦   ¦   favicon.ico
+¦   ¦   favicon.png
+¦   ¦   favicon.svg
 ¦   ¦   Lvl3SShot.png
 ¦   ¦   LvlSShot.png
 ¦   ¦   mainScreen3.png

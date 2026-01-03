@@ -587,6 +587,92 @@ footer nav a:hover { text-decoration: underline; }
 }
 
 
+.credit-disclosure {
+    transform: translateY(clamp(-2.95rem, -6vw, -1rem));
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.credit-disclosure summary {
+    list-style: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+
+    background: rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.15);
+    color: #2d76ff;
+    font-weight: 900;
+    user-select: none;
+}
+
+.credit-disclosure summary::-webkit-details-marker {
+    display: none;
+}
+
+.credit-text {
+    margin-top: 0.5rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.10);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #006b00ff;
+    font-weight: bolder;
+}
+
+.credit-text a {
+    text-decoration: none;
+}
+
+.credit-text a:hover {
+    text-decoration: underline;
+}
+
+.image-gallery {
+    display: block; /* or keep flex, see below */
+}
+
+.image-gallery + .credit-disclosure {
+    display: block;
+    width: 100%;
+    margin-top: 0.75rem;
+}
+
+.attribution-text {
+    position: fixed;
+    left: 1rem;
+    bottom: 8rem;
+    z-index: 60;
+    margin-top: 0.5rem;
+    background: rgba(0,0,0,0.85);
+    color: #eee;
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    max-width: 260px;
+    line-height: 1.4;
+}
+
+.attribution-text a {
+    color: #9fd4ff;
+    text-decoration: none;
+}
+
+.attribution-text a:hover {
+    text-decoration: underline;
+}
+
+
+
+
 /* Highlight the target project group heading when arrived via #hash */
 @keyframes targetPulse {
     0% {
