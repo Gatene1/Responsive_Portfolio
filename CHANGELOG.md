@@ -138,3 +138,10 @@ Updated verbiage in the project Webpages and the main Webpage to catch the eyes 
 - Updated SpriteGrid's project page to reflect v4.0 changes and overall changes in v3.3.1.
 - Updated Title attributes on the crowdfunding/blog/social media data badges across all projects.
 - Finally busted the cache demon that kept CSS and .JS files from loading when I updated them.
+
+# 1/3/2026
+- Finished adding the cache-busing script and the data badges to the remaining Webpages.
+
+# 9/14/2026
+- Fixed the CSS directory path in the HTML files
+- Added the FtB project page with new butterfly favicon that is used on the game as well.

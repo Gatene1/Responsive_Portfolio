@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="description" content="David Riley's Game Design Portfolio Homepage">
+  <meta name="description" content="David Riley's Color Me Booska Game Jam Project Page">
   <meta name="author"      content="David Riley">
-  <meta name="keywords"    content="portfolio, game design, Maya, blog, 3D, 3D art, 3D models, scripting, game scripting, LGBT Friendly, LGBTQ Friendly, LGBTQI Friendly, LGBT, LGBTQ, LGBTQI, Level, Level Design, Gatene, Booska, Java, console, programming, SpruceItUp, AIPartner, AI Partner, #SpruceItUp, #AIPartner">
-  <meta name="reply-to"    content="Gatene1@iCloud.com">
+  <meta name="keywords"    content="portfolio, game design, Maya, blog, 3D, 3D art, 3D models, scripting, game scripting, LGBT Friendly, LGBTQ Friendly, LGBTQI Friendly, LGBT, LGBTQ, LGBTQI, Level, Level Design, Gatene, Booska, Java, console, programming, SpruceItUp, AIPartner, AI Partner, #SpruceItUp, #AIPartner, gameplay design patterns, pattern, pattern scrutiny">
+  <meta name="reply-to"    content="david@outboxgames.com">
   <meta charset = "UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
-  <link rel="stylesheet" type="text/css" href="respIndex.css?v=<?= Date.now() ?>">
+  <link rel="stylesheet" href="css/respIndex.css?v=<?= filemtime('css/respIndex.css') ?>">
   <link rel="icon" href="Images/favicon.svg">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
@@ -18,7 +18,7 @@
 <header>
   <h2 class="header"><a class="header-home" href="index.html">David Riley</a></h2><br>
   <div class="nav-links" id="navLinks" data-remove-item="None">
-    <script language="JavaScript" src="respHeaderMenu.js"></script>
+    <script src="js/respHeaderMenu.js?v=<?= filemtime('js/respHeaderMenu.js') ?>"></script>
   </div>
 </header>
 
@@ -82,12 +82,62 @@
     </ul>
     <p><strong>Made for:</strong> Colors R Everything<br><em>(Epic Games Feature Jam)</em></p>
   </section>
+
+  <section id="links" class="about" aria-labelledby="linksTitle">
+    <h2 id="linksTitle">Links</h2>
+    <ul class="link-list">
+      <li data-brand="play" class="disabled">
+        <img src="Images/icons/joystick.svg" class="link-icon" align="center"> Blink is a WIP
+      </li>
+
+      <li data-brand="itch" title="Use and follow me on Itch.io">
+        <a href="https://carlos-carrera.itch.io/color-me-booska" target="_itch" rel="noopener" title="Use and follow me on Itch.io">
+          <img src="Images/icons/itchio-logo-textless-black.svg" alt="Use and follow me on Itch.io" title="Use and follow me on Itch.io" class="link-icon"> Itch.io
+        </a>
+      </li>
+
+      <li data-brand="BMaC" class="disabled">
+        <img src="Images/icons/bmc-logo.svg" alt="Buy Me a Coffee" title="Buy Me a Coffee" class="link-icon" align="center"> N / A
+      </li>
+
+      <li data-brand="kofi" class="disabled">
+        <img src="Images/icons/kofi_symbol.svg" alt="My Ko-fi Page" title="My Ko-fi Page" class="link-icon" align="center"> N / A
+      </li>
+
+      <li data-brand="patreon" class="disabled">
+        <img src="Images/icons/PATREON_SYMBOL_1_BLACK_RGB.svg" alt="Patreon" title="Patreon" class="link-icon" align="center"> N / A
+      </li>
+
+      <li data-brand="github" title="See &quot;Color Me Booska&quot;&apos;s GitHub Repo">
+        <a href="https://github.com/mharde/ue5-colors-r-everything" target="_github" rel="noopener" title="See &quot;Color Me Booska&quot;&apos;s GitHub Repo">
+          <!-- Use SVGs that inherit currentColor (see note below) -->
+          <img src="Images/icons/GitHub_Invertocat_Dark.svg" alt="See &quot;Color Me Booska&quot;&apos;s GitHub Repo" title="See &quot;Color Me Booska&quot;&apos;s GitHub Repo" class="link-icon"> GitHub Repository
+        </a>
+      </li>
+
+      <li data-brand="OGBlog" title="OutBox Games Blog">
+        <a href="https://outboxgames.com/blog" target="_ogblog" rel="noopener" title="OutBox Games Blog">
+          <img src="Images/icons/outboxgames.svg" alt="OutBox Games Blog" title="OutBox Games Blog" class="link-icon"> OutBox Games Blog
+        </a>
+      </li>
+
+      <li data-brand="trello" title="Trello board for &quot;Color Me Booska&quot;">
+        <a href="https://trello.com/b/wtV8b251/game-jam-colors-r-everything" target="_trello" rel="noopener" title="Trello board for &quot;Color Me Booska&quot;">
+          <img src="Images/icons/trello-neutral.svg" alt="Trello board for &quot;Color Me Booska&quot;" title="Trello board for &quot;Color Me Booska&quot;" class="link-icon"> Trello Board
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <div class="nav-links" style="margin-top: 2rem;">
+    <a class="btn" href="projects.html">← Back to Projects</a>
+  </div>
 </main>
 
 <br><br><br><br>
 <div data-include="Partials/respFooter.html"></div>
 
-<script lang="JavaScript" src="respPortfolio.js?v=1.0.1"></script>
+<script src="js/respPortfolio.js?v=<?= filemtime('js/respPortfolio.js') ?>"></script>
 
 <!-- place near the end of <body> on every page -->
 <script type="module">

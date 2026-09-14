@@ -3,11 +3,11 @@
 <head>
     <meta name="description" content="David Riley's Game Design Portfolio Homepage">
     <meta name="author"      content="David Riley">
-    <meta name="keywords"    content="portfolio, game design, Maya, blog, 3D, 3D art, 3D models, scripting, game scripting, LGBT Friendly, LGBTQ Friendly, LGBTQI Friendly, LGBT, LGBTQ, LGBTQI, Level, Level Design, Gatene, Booska, Java, console, programming, SpruceItUp, AIPartner, AI Partner, #SpruceItUp, #AIPartner">
-    <meta name="reply-to"    content="Gatene1@iCloud.com">
+    <meta name="keywords"    content="portfolio, game design, Maya, blog, 3D, 3D art, 3D models, scripting, game scripting, LGBT Friendly, LGBTQ Friendly, LGBTQI Friendly, LGBT, LGBTQ, LGBTQI, Level, Level Design, Gatene, Booska, Java, console, programming, SpruceItUp, AIPartner, AI Partner, #SpruceItUp, #AIPartner, gameplay design patterns, pattern, pattern scrutiny">
+    <meta name="reply-to"    content="david@outboxgames.com">
     <meta charset = "UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
-    <link rel="stylesheet" type="text/css" href="respIndex.css?v=<?= filemtime('respIndex.css') ?>">
+    <link rel="stylesheet" type="text/css" href="css/respIndex.css?v=<?= filemtime('js/respIndex.css') ?>">
     <link rel="icon" href="Images/favicon.svg">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -19,7 +19,7 @@
 <header>
     <h2 class="header"><a class="header-home" href="index.html">David Riley</a></h2><br>
     <div class="nav-links" id="navLinks" data-remove-item="Home">
-        <script language="JavaScript" src="respHeaderMenu.js?v=<?= filemtime('respHeaderMenu.js') ?>"></script>
+        <script language="JavaScript" src="js/respHeaderMenu.js?v=<?= filemtime('respHeaderMenu.js') ?>"></script>
     </div>
 </header>
 
@@ -42,11 +42,34 @@
 
     <ul>
         <li>Glean mini-games – small experiments that embody core gameplay patterns.</li>
-        <li>Actionary tools – Topic Creator, PatternChooser, and friends for structured ideation.</li>
+        <li>Actionary tools – Topic Creator and PatternChooser for structured ideation.</li>
         <li>SpriteGrid – a custom sprite editor for tile-based HTML5 projects.</li>
         <li>Game jams – testing ideas fast with collaborators and constraints.</li>
         <li class="disabled">Future: PatternCodex & VR / BCI-friendly experiments.</li>
     </ul>
+</section>
+
+<section class="latest-release" aria-labelledby="latest-release-heading">
+    <h2 id="latest-release-heading">Latest Release</h2>
+    <div class="release-card">
+        <div class="release-copy">
+            <p class="release-kicker">New publication</p>
+            <h3>Pattern Scrutiny Issue #01</h3>
+            <p>
+                The first issue of Pattern Scrutiny is now available — a focused breakdown of gameplay
+                patterns, comparisons, and designer takeaways for developers who want more than vague theory.
+            </p>
+            <div class="release-actions">
+                <a class="btn" href="ps_Proj.html">View Issue</a>
+                <a class="btn btn-secondary" href="https://www.paypal.com/ncp/payment/ENKXHCL8VCDZW" target="_blank" rel="noopener noreferrer">
+                    Buy with PayPal
+                </a>
+            </div>
+        </div>
+        <div class="release-art">
+            <img class="psImage" src="Images/pattern-scrutiny-issue01-cover.png" alt="Cover of Pattern Scrutiny Issue #01" />
+        </div>
+    </div>
 </section>
 
 <section class="pillars" aria-labelledby="pillars-heading">
@@ -61,8 +84,7 @@
         <article class="pillar-card">
             <h3><span class="pillar-icon" aria-hidden="true">🧠</span> Actionary Tools</h3>
             <p>
-                Topic Creator, PatternChooser, MechanicVerber, and the PatternDex – tools for
-                structured ideation and thinking in game design patterns.
+                Topic Creator and PatternChooser – tools for structured ideation and thinking in game design patterns.
             </p>
             <a href="projects.html#actionary-tools" class="pillar-link">Browse Actionary Suite</a>
         </article>
@@ -93,6 +115,24 @@
     <p class="subtle-note fp-p">A hand-picked set of my latest and strongest work.</p>
     <div class="project-grid">
         <!-- 5 Square Grid -->
+
+        <article class="project-card" id="card8" data-group="publications" data-published="2026-03-01">
+            <div class="thumb-wrapper">
+                <img src="Images/pattern-scrutiny-issue01-cover.png" alt="Pattern Scrutiny Issue #01 cover" />
+                <div class="badge version" title="Issue #01 of Pattern Scrutiny is now available.">
+                    Issue #01 Published  !
+                </div>
+            </div>
+            <br clear="all">
+            <h3>Pattern Scrutiny Issue #01</h3>
+            <p>
+                A polished gameplay-pattern analysis issue featuring comparisons, structured breakdowns,
+                and practical designer takeaways.
+            </p>
+            <div class="meta">
+                <span class="project-chip" aria-label="Group: Publications">Publication</span>
+            </div>
+        </article>
 
         <article class="project-card" id="card7" data-group="tools" data-published="2025-11-11">
             <div class="thumb-wrapper">
@@ -138,21 +178,6 @@
             </div>
         </article>
 
-        <article class="project-card" id="card3" data-group="jams">
-            <div class="thumb-wrapper">
-            <img src="Images/booska_Image3.png" alt="Group Game Jam Submission in UE5" />
-                <div class="badge demo" title="Game Jam submission for Colors R Everything.">
-                    Game Jam
-                </div>
-            </div>
-            <br clear="all">
-            <h3>Color Me Booska</h3>
-            <p>Group Game Jam Submission in Unreal Engine 5.</p>
-            <div class="meta">
-                <span class="project-chip" aria-label="Group: Game Jams">Game Jams</span>
-            </div>
-        </article>
-
     </div>
 </section>
 
@@ -162,7 +187,7 @@
 <!-- place near the end of <body> on every page -->
 <div data-include="Partials/respFooter.html"></div>
 
-<script lang="JavaScript" src="respPortfolio.js?v=<?= filemtime('respPortfolio.js') ?>"></script>
+<script lang="JavaScript" src="js/respPortfolio.js?v=<?= filemtime('js/respPortfolio.js') ?>"></script>
 
 <!-- place near the end of <body> on every page -->
 <script type="module">

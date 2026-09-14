@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="description" content="David Riley's Follow the Butterflies Project Page">
+  <meta name="author"      content="David Riley">
+  <meta name="keywords"    content="portfolio, game design, Maya, blog, 3D, 3D art, 3D models, scripting, game scripting, LGBT Friendly, LGBTQ Friendly, LGBTQI Friendly, LGBT, LGBTQ, LGBTQI, Level, Level Design, Gatene, Booska, Java, console, programming, SpruceItUp, AIPartner, AI Partner, #SpruceItUp, #AIPartner, gameplay design patterns, pattern, pattern scrutiny, follow the butterflies">
+  <meta name="reply-to"    content="david@outboxgames.com">
+  <meta charset = "UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+  <link rel="stylesheet" href="css/respIndex.css?v=<?= filemtime('css/respIndex.css') ?>">
+  <link rel="icon" href="Images/ftb_favico.png">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Follow the Butterflies — OutBox Games</title>
+</head>
+<body>
+<header>
+  <h2 class="header"><a class="header-home" href="index.html">David Riley</a></h2><br>
+  <div class="nav-links" id="navLinks" data-remove-item="None">
+    <script src="js/respHeaderMenu.js?v=<?= filemtime('js/respHeaderMenu.js') ?>"></script>
+  </div>
+</header>
+
+<main class="project-detail">
+  <section class="hero">
+    <h1>Follow the Butterflies<span style="font-size: 0.5em; font-style: italic;">(Work in Progress)</span></h1>
+    <p>Part 2 of my HTML5 games series that embody gameplay design patterns.</p>
+
+    <div style="max-width: 100%; aspect-ratio: 16 / 9; margin: 1rem 0; background-color: #000; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+  <span style="opacity: 0.6; text-align: center; padding: 2rem;">
+    Dev video coming soon...
+  </span>
+    </div>
+
+    <div class="image-gallery">
+      <img src="Images/ftb.png" alt="Koot's Prototype" />
+      <img src="Images/ftb_SS1.png" alt="Follow the Butterflies Screenshot 1" />
+    </div>
+  </section>
+
+    <!-- Spruce's Image Modal -->
+    <div id="imgModal" class="modal">
+      <span class="modal-bg"></span>
+      <img id="modalImg" src="" alt="Expanded View">
+    </div>
+    <!-- End Spruce's Image Modal -->
+
+    <section class="about">
+      <h2>About This Project</h2>
+      <p>Glean's First isometric arcade-style game, set in a single bar where drinking, social interactions, and buttefly-chasing drive the night.</p>
+<!--      <p>-->
+<!--        Blink is a top-down puzzle game about navigating minimal mazes to reunite with a mysterious character on the other side. Currently in development, its focus is on movement-based problem solving and level-based progression.-->
+<!--      </p>-->
+
+      <h3>Core Features</h3>
+      <ul>
+        <li>Classic collectable gathering gameplay</li>
+        <li>Dynamic one-stage design</li>
+        <li>Night-by-night progression with changing bar configurations</li>
+      </ul>
+
+      <h3>Built With</h3>
+      <ul>
+        <li>JavaScript + HTML5 Canvas</li>
+        <li>Custom engine vibe coded with multiple AI sources</li>
+      </ul>
+
+      <p><strong>Status:</strong> In active development</p>
+      <p><strong>Next Steps: Continue to gather sprites and populate the barroom stage.</strong></p>
+    </section>
+
+  <section class="card actionary-prompts" aria-labelledby="actionary-label">
+    <h2 id="actionary-label">Topic Creator & PatternChooser Prompts</h2>
+    <p class="muted">The Generated inspiration that seeded this project with my tools:</p>
+
+    <div class="actionary-grid">
+      <!-- Topic Creator -->
+      <article class="action-card topic">
+        <header class="action-header">Topic Creator</header>
+        <div class="action-body">
+          <div class="tooltipOverride">
+            <ul class="tooltip-list">
+              <li class="has-tip" tabindex="0" data-tip="Easy. This game belongs in a bar. One room?">Bartender</li>
+              <li class="has-tip" tabindex="0" data-tip="Decagaon = 10 sides. Hmm...the number 10? 10 butterflies? Is 10 too much?">Decagon</li>
+              <li class="has-tip" tabindex="0" data-tip="The game takes place in a bar. In a bar, you drink, when you drink, you can hallucinate.">Butterfly</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <!-- PatternChooser -->
+      <article class="action-card pattern">
+        <header class="action-header">PatternChooser</header>
+        <div class="action-body">
+          <ul class="tooltip-list">
+            <li class="has-tip" tabindex="0" data-tip="Drink → See → Catch. Drinking progresses Koot to seeing butterflies; seeing creates targets; catching advances the night's objective.">
+              Core Gameplay Loop
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="The same bar is reused night after night, but patrons, events, butterfly locations, room access, etc. change. The physical space becomes familiar while the situation changes.">
+              Repeated Game World / Reconfigurable Level
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="Each night draws from different configurations — who is present, what they're doing, where butterflies appear, which hotspots are occupied, and potentially which events occur.">
+              Randomized / Variable Setup
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="Butterfly spawn locations aren't just arbitrary coordinates. They're associated with meaningful places: bar, occupied table, pool table, jukebox, stage, back room, etc.">
+              Hotspots / Points of Interest
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="&quot;Catch butterfly&quot; can produce a different situation depending on where the butterfly is. Catching one at an empty table is trivial; catching one between two patrons may mean invading their space; behind the bar means dealing with the bartender.">
+              Context-Dependent Actions
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="A desirable butterfly can appear somewhere socially dangerous. The player chooses whether getting it is worth annoying somebody, interrupting something, getting thrown out, starting a fight, etc.">
+              Risk/Reward
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="The state of the bar communicates what's happening tonight — patrons, occupied spaces, activities, and room conditions tell part of the story without exposition.">
+              Environmental Storytelling
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="Your newest example is excellent: light beneath the left door = back room available; no light = unavailable. Once learned, the environment communicates the rule without UI text.">
+              Visual Language / Signposting
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="More presentation than gameplay by itself, but we're designing the bar so characters can exist behind/in front of scenery — bartender behind the counter, Koot moving around patrons and furniture, etc.">
+              Occlusion / Layered Space
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="Because players repeatedly visit the same bar, they'll learn its geography. &quot;Butterfly behind the bar&quot; eventually means something immediately different from &quot;butterfly near the pool table.&quot;">
+              Spatial Familiarity / Mastery
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="Koot's actions provoke responses. He can interrupt conversations, invade personal space, flirt, annoy people, get shoved, fight, etc. NPCs aren't merely scenery around collectibles.">
+              NPC Reactions / Social Consequences
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="This is one of FtB's most important ones. A relatively small collection of systems — butterfly location + patron placement + activity + Koot's behavior — can combine into situations you didn't have to author as completely separate levels.">
+              Emergent Situations
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="Each night has a natural endpoint: last call. Alternatively, Koot can finish earlier by meeting the butterfly objective.">
+              Time Limit / Session Boundary
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="Catching the required butterflies gives the player an explicit short-term objective within each night.">
+              Goal Completion
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="Drinking isn't merely a meter going up — it's an action Koot performs in the fiction, and it changes what he can perceive: eventually, butterflies appear.">
+              Diegetic Progression Trigger
+            </li>
+            <li class="has-tip" tabindex="0" data-tip="The core loop deliberately repeats, while circumstances surrounding that loop vary. That's crucial to the whole &quot;same bar, different night&quot; structure.">
+              Controlled Repetition
+            </li>
+
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="links" class="about" aria-labelledby="linksTitle">
+    <h2 id="linksTitle">Links</h2>
+    <ul class="link-list">
+      <li data-brand="play" class="disabled">
+        <img src="Images/icons/joystick.svg" class="link-icon" align="center"> FtB is a WIP
+      </li>
+
+      <li data-brand="itch" title="Use and follow me on Itch.io">
+        <a href="https://gatene.itch.io/follow-the-butterflies" target="_itch" rel="noopener" title="Use and follow me on Itch.io">
+          <img src="Images/icons/itchio-logo-textless-black.svg" alt="Use and follow me on Itch.io" title="Use and follow me on Itch.io" class="link-icon"> Itch.io
+        </a>
+      </li>
+
+      <li data-brand="BMaC" title="Buy Me a Coffee">
+        <a href="https://buymeacoffee.com/bytecoder/follow-butterflies" target="_bmc" rel="noopener" title="Buy Me a Coffee">
+          <img src="Images/icons/bmc-logo.svg" alt="Buy Me a Coffee" title="Buy Me a Coffee" class="link-icon"> Buy Me a Coffee Page
+        </a>
+      </li>
+
+      <li data-brand="kofi" title="My Ko-Fi Page">
+        <a href="https://ko-fi.com/post/Follow-the-Butterflies-I2I01PYEZI" target="_kofi" title="Ko-Fi Page" rel="noopener">
+          <img src="Images/icons/kofi_symbol.svg" alt="My Ko-Fi Page" title="My Ko-Fi Page" class="link-icon" align="center"> Ko-Fi Page
+        </a>
+      </li>
+
+      <li data-brand="patreon" title="Patreon">
+        <a href="https://www.patreon.com/thedavid/posts/follow-145416197" target="_patreon" rel="noopener" title="Patreon">
+          <img src="Images/icons/PATREON_SYMBOL_1_BLACK_RGB.svg" alt="Patreon" title="Patreon" class="link-icon" align="center"> Patreon Page
+        </a>
+      </li>
+
+      <li data-brand="github" title="See &quot;Follow the Butterflies&quot;&apos; GitHub Repository">
+        <a href="https://github.com/Gatene1/FollowTheButterflies" target="_github" rel="noopener" title="GitHub Repository">
+          <img src="Images/icons/GitHub_Invertocat_Dark.svg" class="link-icon" align="center"> GitHub Repository
+        </a>
+      </li>
+
+      <li data-brand="OGBlog" title="OutBox Games Blog">
+        <a href="https://www.outboxgames.com/blog/follow-the-butterflies/" target="_ogblog" rel="noopener" title="OutBox Games Blog">
+          <img src="Images/icons/outboxgames.svg" alt="OutBox Games Blog" title="OutBox Games Blog" class="link-icon"> OutBox Games Blog
+        </a>
+      </li>
+
+      <li data-brand="trello" title="Trello board for &quot;Follow the Butterflies&quot;">
+        <a href="https://trello.com/b/ccRntIFm/follow-the-butterflies" target="_trello" rel="noopener" title="Trello board for &quot;Follow the Butterflies&quot;">
+          <img src="Images/icons/trello-neutral.svg" alt="Trello board for &quot;Color Follow the Butterflies&quot;" title="Trello board for &quot;Follow the Butterflies&quot;" class="link-icon"> Trello Board
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <div class="nav-links" style="margin-top: 2rem;">
+    <a class="btn" href="projects.html">← Back to Projects</a>
+  </div>
+</main>
+
+<br><br><br><br>
+<div data-include="Partials/respFooter.html"></div>
+
+<script src="js/respPortfolio.js?v=<?= filemtime('respPortfolio.js') ?>"></script>
+
+<!-- place near the end of <body> on every page -->
+<script type="module">
+  async function includePartials() {
+    const nodes = document.querySelectorAll('[data-include]');
+    for (const el of nodes) {
+      const url = el.getAttribute('data-include');
+      const res = await fetch(url, { cache: 'no-store' });
+      el.outerHTML = await res.text();
+    }
+    // footer init runs AFTER the HTML is in the page
+    const y = document.getElementById('y');
+    if (y) y.textContent = new Date().getFullYear().toString();
+  }
+  includePartials();
+</script>
+</body>
+</html>

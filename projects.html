@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="David Riley's Game Design Portfolio Homepage">
+    <meta name="description" content="David Riley's Projects Page">
     <meta name="author"      content="David Riley">
-    <meta name="keywords"    content="portfolio, game design, Maya, blog, 3D, 3D art, 3D models, scripting, game scripting, LGBT Friendly, LGBTQ Friendly, LGBTQI Friendly, LGBT, LGBTQ, LGBTQI, Level, Level Design, Gatene, Booska, Java, console, programming, SpruceItUp, AIPartner, AI Partner, #SpruceItUp, #AIPartner">
-    <meta name="reply-to"    content="Gatene1@iCloud.com">
+    <meta name="keywords"    content="portfolio, game design, Maya, blog, 3D, 3D art, 3D models, scripting, game scripting, LGBT Friendly, LGBTQ Friendly, LGBTQI Friendly, LGBT, LGBTQ, LGBTQI, Level, Level Design, Gatene, Booska, Java, console, programming, SpruceItUp, AIPartner, AI Partner, #SpruceItUp, #AIPartner, gameplay design patterns, pattern, pattern scrutiny">
+    <meta name="reply-to"    content="david@outboxgames.com">
     <meta charset = "UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
-    <link rel="stylesheet" type="text/css" href="respIndex.css?v=<?= Date.now ?>">
+    <link rel="stylesheet" href="css/respIndex.css?v=<?= filemtime('respIndex.css') ?>">
     <link rel="icon" href="Images/favicon.svg">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -18,7 +18,7 @@
 <header>
     <h2 class="header"><a class="header-home" href="index.html">David Riley</a></h2><br>
     <div class="nav-links" id="navLinks" data-remove-item="Projects">
-        <script language="JavaScript" src="respHeaderMenu.js"></script>
+        <script src="js/respHeaderMenu.js?v=<?= filemtime('js/respHeaderMenu.js') ?>"></script>
     </div>
 </header>
 
@@ -80,7 +80,7 @@
                 <h3>PatternChooser</h3>
                 <p>Part 2 of Actionary: An interactive design companion that helps developers identify and contrast core gameplay patterns.</p>
                 <div class="meta">
-                    <span class="project-chip" aria-label="Group: Tools">Tool</span>
+                    <span class="project-chip" aria-label="Group: Tools">Tools</span>
                 </div>
             </article>
         </div>
@@ -169,14 +169,14 @@
             <!-- Blink (WIP game, still flagged as WIP) -->
             <article class="project-card" id="card4" data-group="wip">
                 <div class="thumb-wrapper">
-                    <img src="Images/blink_Image1.png" alt="Blink Level Screenshot" />
-                    <div class="badge wip" title="Part 1 on HTML5 games that embody Game Design Principles.">
+                    <img src="Images/ftb.png" alt="Follow The Butterflies' Koot Prototype." />
+                    <div class="badge wip" title="Part 2 on HTML5 games that embody Gameplay Design Patterns.">
                         WIP
                     </div>
                 </div>
                 <br clear="all">
-                <h3>Blink</h3>
-                <p>Part 2 of Glean: an HTML5 prototype exploring Game Design Patterns through movement constraints.</p>
+                <h3>Follow the Butterflies</h3>
+                <p>Part 2 of Glean: an HTML5 prototype exploring Gameplay Design Patterns through a single dynamic stage.</p>
                 <div class="meta">
                     <span class="project-chip" aria-label="Group: WIP">WIP</span>
                 </div>
@@ -211,7 +211,7 @@
 <!-- place near the end of <body> on every page -->
 <div data-include="Partials/respFooter.html"></div>
 
-<script lang="JavaScript" src="respPortfolio.js"></script>
+<script src="js/respPortfolio.js?v=<?= filemtime('respPortfolio.js') ?>"></script>
 
 <!-- place near the end of <body> on every page -->
 <script type="module">
