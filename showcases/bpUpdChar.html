@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="David Riley's Game Design Portfolio Homepage">
+    <meta name="author"      content="David Riley">
+    <meta name="keywords"    content="portfolio, game design, Maya, blog, 3D, 3D art, 3D models, scripting, game scripting, LGBT Friendly, LGBTQ Friendly, LGBTQI Friendly, LGBT, LGBTQ, LGBTQI, Level, Level Design, Gatene, Booska, Java, console, programming, SpruceItUp, AIPartner, AI Partner, #SpruceItUp, #AIPartner, gameplay design patterns, pattern, pattern scrutiny, Mr. Pillbody, Nobody, Mrs. Pillbody, Combat, Blueprints">
+    <meta name="reply-to"    content="david@outboxgames.com">
+    <meta charset = "UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <link rel="stylesheet" href="../css/respIndex.css?v=<?= filemtime('respIndex.css') ?>">
+    <link rel="icon" href="../Images/favicon.svg">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>UpdateCharacterHPWidget UE Blueprint</title>
+</head>
+<body data-root="../">
+<header>
+    <h2 class="header"><a class="header-home" href="../index.html">David Riley</a></h2><br>
+    <div class="nav-links" id="navLinks">
+        <script src="../js/respHeaderMenu.js?v=<?= filemtime('../js/respHeaderMenu.js') ?>"></script>
+    </div>
+</header>
+<section class="showcaseBPContent">
+    <h2>The Adventures of Mr. Pillbody's Showcase</h2>
+    <h3>UpdateCharacterHPWidget</h3>
+    this function is part of the combat system inside the Comp_HP component to update HP bar on either the Player or the Enemy with the World Space Widget for the health bar.
+    <iframe src="https://blueprintue.com/render/x41y72ej/" scrolling="no" allowfullscreen class="showcaseBP"></iframe>
+
+
+</section>
+
+<br><br><br><br>
+
+<div data-include="../Partials/respFooter.html"></div>
+
+<script src="../js/respPortfolio.js?v=<?= filemtime('../js/respPortfolio.js') ?>"></script>
+
+<!-- place near the end of <body> on every page -->
+<script type="module">
+    async function includePartials() {
+        const nodes = document.querySelectorAll('[data-include]');
+        for (const el of nodes) {
+            const url = el.getAttribute('data-include');
+            const res = await fetch(url, { cache: 'no-store' });
+            el.outerHTML = await res.text();
+        }
+        // footer init runs AFTER the HTML is in the page
+        const y = document.getElementById('y');
+        if (y) y.textContent = new Date().getFullYear();
+    }
+    includePartials();
+</script>
+
+</body>
+</html>

@@ -145,3 +145,9 @@ Updated verbiage in the project Webpages and the main Webpage to catch the eyes 
 # 9/14/2026
 - Fixed the CSS directory path in the HTML files
 - Added the FtB project page with new butterfly favicon that is used on the game as well.
+
+# 10/2/2026, 10/3/2026, 10/4/2026
+- Updated site with a Showcase section to display showcases.
+- Added another page to list the blueprints of the showcases.
+- Added the individual pages to display the blueprints from blueprintue.com.
+- Updated the header JavaScript script section to handle linking from inside and to pages inside subdirectories.

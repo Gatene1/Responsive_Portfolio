@@ -7,7 +7,7 @@
 
 body { margin: 0; padding: 0; padding-bottom: 60px; background-color: var(--bg-color); color: var(--text-color);
        accent-color: var(--accent-color); display: flex; flex-direction: column; min-height: 100vh;
-       background-image: url('Images/BooskaBg.png'); background-repeat: no-repeat; background-size: 300px;
+       background-image: url('../Images/BooskaBg.png'); background-repeat: no-repeat; background-size: 300px;
        background-position: bottom right; background-attachment: fixed; filter: brightness(100%) contrast(85%);
        font-family: Arial Rounded MT Bold;
 }
@@ -817,6 +817,179 @@ a.pdf-icon-link { color: var(--text-color); text-decoration: none; font-weight: 
 
 
 
+/* Showcase styles */
+
+.showcaseBPContent {
+    padding: 2rem 1rem; margin: auto; color: var(--text-color); line-height: 1.6; width: 90vw;
+}
+
+.showcaseBPContent h2, .showcaseBPContent h3 { background: rgba(238, 238, 238, 0.8); padding: 0.5rem 1rem; border-radius: 8px;
+    color: var(--text-color); text-align: center; font-weight: bolder; text-shadow: 0 0 3px #7c3aed, 0 0 6px #fff; }
+
+
+.showcase-list {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    /*border: 1px solid rgba(238, 238, 238, 0.8); */
+    border: 1px solid #7c3aed;
+}
+
+.showcase-item {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.showcase-item:nth-child(even) {
+    background: rgba(124, 58, 237, 0.06);
+}
+
+.showcase-identity {
+    text-align: center;
+    width: 100%;
+}
+
+.showcase-identity a {
+    color: var(--text-color);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.indivShowcase-item {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    align-items: stretch;
+
+    border-left: 2px solid transparent;
+    transition: background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.indivShowcase-item:nth-child(even) {
+    background: rgba(124, 58, 237, 0.06);
+}
+
+.indivShowcase-item:hover {
+    background: rgba(124, 58, 237, 0.10);
+    border-left-color: var(--accent-color);
+}
+
+.indivShowcase-identity {
+    display: grid;
+    align-items: center;
+    padding: 0.75rem;
+}
+
+.indivShowcase-identity a {
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.indivShowcase-identity a:hover {
+    text-decoration: underline;
+}
+
+.indivShowcase-info {
+    padding: 0.75rem;
+}
+
+.indivShowcase-description {
+    height: 100%;
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+}
+
+.indivShowcase-description a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.showcase-title {
+    margin: 0 0 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.showcase-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.showcase-thumbnail {
+    display: block;
+    width: 240px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.showcase-info {
+    padding-top: 0.25rem;
+}
+
+.showcase-meta {
+    margin-bottom: 0.6rem;
+    font-size: 0.85rem;
+    font-style: italic;
+    opacity: 0.75;
+}
+
+.showcase-description {
+    display: flex;
+    line-height: 1.5;
+    cursor: default;
+    margin-top: 0;
+}
+
+.showcaseBP {
+    width: 90vw;
+    height: clamp(600px, 80vh, 1000px);
+}
+
+/* End Showcase styles */
+
+
+
 /* Highlight the target project group heading when arrived via #hash */
 @keyframes targetPulse {
     0% {
@@ -918,3 +1091,27 @@ a.pdf-icon-link { color: var(--text-color); text-decoration: none; font-weight: 
         flex: 0 1 calc(50% - 1rem);
     }
 }
+
+/* Showcase @media styles */
+
+@media (max-width: 600px) {
+    .showcase-item {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-identity {
+        width: 100%;
+    }
+
+    .showcase-thumbnail {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .showcase-title {
+        text-align: center;
+    }
+}
+
+/* End Showcase media styles /*

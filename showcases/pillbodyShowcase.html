@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="David Riley's Game Design Portfolio Homepage">
+    <meta name="author"      content="David Riley">
+    <meta name="keywords"    content="portfolio, game design, Maya, blog, 3D, 3D art, 3D models, scripting, game scripting, LGBT Friendly, LGBTQ Friendly, LGBTQI Friendly, LGBT, LGBTQ, LGBTQI, Level, Level Design, Gatene, Booska, Java, console, programming, SpruceItUp, AIPartner, AI Partner, #SpruceItUp, #AIPartner, gameplay design patterns, pattern, pattern scrutiny, Mr. Pillbody, Nobody, Mrs. Pillbody, Combat, Blueprints">
+    <meta name="reply-to"    content="david@outboxgames.com">
+    <meta charset = "UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <link rel="stylesheet" href="../css/respIndex.css?v=<?= filemtime('respIndex.css') ?>">
+    <link rel="icon" href="../Images/favicon.svg">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Mr. Pillbody's Combat Blueprints</title>
+</head>
+<body data-root="../">
+<header>
+    <h2 class="header"><a class="header-home" href="../index.html">David Riley</a></h2><br>
+    <div class="nav-links" id="navLinks">
+        <script src="../js/respHeaderMenu.js?v=<?= filemtime('js/respHeaderMenu.js') ?>"></script>
+    </div>
+</header>
+<section class="about">
+    <h2>The Adventures of Mr. Pillbody's Showcase</h2>
+    <h3>Unreal Engine Blueprints</h3>
+
+    <div class="showcase-list">
+
+        <article class="indivShowcase-item">
+            <div class="indivShowcase-identity">
+                <a href="bpPillbody.html">
+                    BPC_MrPillbody
+                </a>
+
+                <span></span>
+            </div>
+
+            <div class="indivShowcase-info">
+                <div class="indivShowcase-description">
+                    <a href="bpPillbody.html">This is my blueprint for the Player character, Mr. Pillbody. The actual combat comes from the IA_Attack node.</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="indivShowcase-item">
+            <div class="indivShowcase-identity">
+                <a href="bpHolstered.html">
+                    WeaponHolstered?
+                </a>
+            </div>
+
+            <div class="indivShowcase-info">
+                <div class="indivShowcase-description">
+                    <a href="bpHolstered.html">This function is part of the combat system to tell if the Player can swing his sword by finding out if he's already attacking, finishing up, or if the sword is holstered (on his side). If it is the latter, the player can swing his sword to attack.</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="indivShowcase-item">
+            <div class="indivShowcase-identity">
+                <a href="bpEnumAdvance.html">
+                    AdvanceSwordAttackTypeEnum
+                </a>
+            </div>
+
+            <div class="indivShowcase-info">
+                <div class="indivShowcase-description">
+                    <a href="bpEnumAdvance.html">This function is part of the combat system to tell which type of sword attack the Player will execute when pressing LMB or 'E'. There are only 2 types now: a standard hack (straight up and down rotation), and the secondary one that swings the sword laterally directly in front of the Player, causing a further reach.</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="indivShowcase-item">
+            <div class="indivShowcase-identity">
+                <a href="bpNobody.html">
+                    BPC_Nobody
+                </a>
+            </div>
+
+            <div class="indivShowcase-info">
+                <div class="indivShowcase-description">
+                    <a href="bpNobody.html">This blueprint is the blueprint for the enemy character, "Nobody". For the Event Dispatcher, I didn't want to overcrowd Even BeginPlay, so I made a second custom event, which is toward the bottom of this same blueprint.</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="indivShowcase-item">
+            <div class="indivShowcase-identity">
+                <a href="bpCanAttack.html">
+                    CanAttack?
+                </a>
+            </div>
+
+            <div class="indivShowcase-info">
+                <div class="indivShowcase-description">
+                    <a href="bpCanAttack.html">This is a blueprint that is part of the combat system to see if the enemy can attack the player when he's in the appropriate state.</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="indivShowcase-item">
+            <div class="indivShowcase-identity">
+                <a href="bpCompHP.html">
+                    Comp_HP
+                </a>
+            </div>
+
+            <div class="indivShowcase-info">
+                <div class="indivShowcase-description">
+                    <a href="bpCompHP.html">This is the main blueprint for the Comp_HP component that governs HP in the characters. Be sure to CTRL+Scroll out to see the second event at the bottom.</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="indivShowcase-item">
+            <div class="indivShowcase-identity">
+                <a href="bpAdjHP.html">
+                    AdjustHP
+                </a>
+            </div>
+
+            <div class="indivShowcase-info">
+                <div class="indivShowcase-description">
+                    <a href="bpAdjHP.html">This function is part of the combat system, and as its name suggests, a value (postive or negative) is added to the current HP, is clamped, and sent back to the caller.</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="indivShowcase-item">
+            <div class="indivShowcase-identity">
+                <a href="bpUpdChar.html">
+                    UpdateCharacterHPWidget
+                </a>
+            </div>
+
+            <div class="indivShowcase-info">
+                <div class="indivShowcase-description">
+                    <a href="bpUpdChar.html">this function is part of the combat system inside the Comp_HP component to update HP bar on either the Player or the Enemy with the World Space Widget for the health bar.</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="indivShowcase-item">
+            <div class="indivShowcase-identity">
+                <a href="bpSetHealth.html">
+                    SetHealth
+                </a>
+            </div>
+
+            <div class="indivShowcase-info">
+                <div class="indivShowcase-description">
+                    <a href="bpSetHealth.html">This function is inside the W_HPBar widget that is used for both players: a front-facing local-space health bar using the widget for the Player, and a world-space health bar using the widget for the enemy. This function updates the Percentage of the progress bar.</a>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+
+</section>
+
+<br><br><br><br>
+
+<div data-include="../Partials/respFooter.html"></div>
+
+<script src="../js/respPortfolio.js?v=<?= filemtime('respPortfolio.js') ?>"></script>
+
+<!-- place near the end of <body> on every page -->
+<script type="module">
+    async function includePartials() {
+        const nodes = document.querySelectorAll('[data-include]');
+        for (const el of nodes) {
+            const url = el.getAttribute('data-include');
+            const res = await fetch(url, { cache: 'no-store' });
+            el.outerHTML = await res.text();
+        }
+        // footer init runs AFTER the HTML is in the page
+        const y = document.getElementById('y');
+        if (y) y.textContent = new Date().getFullYear();
+    }
+    includePartials();
+</script>
+
+</body>
+</html>

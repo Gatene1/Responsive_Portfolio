@@ -166,3 +166,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 });
+
+function goToPage(URL) {
+    window.location.assign(URL);
+}

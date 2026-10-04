@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="David Riley's Game Design Portfolio Homepage">
+    <meta name="author"      content="David Riley">
+    <meta name="keywords"    content="portfolio, game design, Maya, blog, 3D, 3D art, 3D models, scripting, game scripting, LGBT Friendly, LGBTQ Friendly, LGBTQI Friendly, LGBT, LGBTQ, LGBTQI, Level, Level Design, Gatene, Booska, Java, console, programming, SpruceItUp, AIPartner, AI Partner, #SpruceItUp, #AIPartner, gameplay design patterns, pattern, pattern scrutiny, Mr. Pillbody, Nobody, Mrs. Pillbody, Combat, Blueprints">
+    <meta name="reply-to"    content="david@outboxgames.com">
+    <meta charset = "UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <link rel="stylesheet" href="css/respIndex.css?v=<?= filemtime('respIndex.css') ?>">
+    <link rel="icon" href="Images/favicon.svg">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Showcases of Mechanics and Features</title>
+</head>
+<body>
+<header>
+    <h2 class="header"><a class="header-home" href="index.html">David Riley</a></h2><br>
+    <div class="nav-links" id="navLinks" data-remove-item="Showcase">
+        <script src="js/respHeaderMenu.js?v=<?= filemtime('js/respHeaderMenu.js') ?>"></script>
+    </div>
+</header>
+<section class="about">
+    <h2>Showcases</h2>
+    <p>Showcases are focused examples built from incomplete, experimental, or
+        otherwise unfinished game projects. Each one highlights a specific
+        mechanic, system, or implementation technique.<br><br>
+
+        They exist here as practical demonstrations of my game design and
+        development work, with additional details such as Blueprints, videos,
+        implementation notes, and other supporting material.</p>
+
+    <div class="showcase-list">
+
+        <article class="showcase-item">
+
+            <div class="showcase-identity">
+                <a href="showcases/pillbodyShowcase.html">
+                        The Adventures of Mr. Pillbody
+                </a>
+
+                <a href="showcases/pillbodyShowcase.html">
+                    <img
+                            class="showcase-thumbnail"
+                            src="Images/Pillbody_Showcase.png"
+                            alt="Screenshot from The Adventures of Mr. Pillbody"
+                    >
+                </a>
+            </div>
+
+            <div class="showcase-info" onclick="goToPage('showcases/pillbodyShowcase.html')">
+                <div class="showcase-meta">
+                    Combat <span aria-hidden="true">·</span> Unreal Engine Blueprints
+                </div>
+
+                <div class="showcase-description">
+                    A small action-RPG combat showcase demonstrating
+                    character attacks, combat logic, and related Blueprint
+                    systems.
+                </div>
+            </div>
+
+        </article>
+
+    </div>
+
+
+</section>
+
+<br><br><br><br>
+
+<div data-include="Partials/respFooter.html"></div>
+
+<script src="js/respPortfolio.js?v=<?= filemtime('respPortfolio.js') ?>"></script>
+
+<!-- place near the end of <body> on every page -->
+<script type="module">
+    async function includePartials() {
+        const nodes = document.querySelectorAll('[data-include]');
+        for (const el of nodes) {
+            const url = el.getAttribute('data-include');
+            const res = await fetch(url, { cache: 'no-store' });
+            el.outerHTML = await res.text();
+        }
+        // footer init runs AFTER the HTML is in the page
+        const y = document.getElementById('y');
+        if (y) y.textContent = new Date().getFullYear();
+    }
+    includePartials();
+</script>
+
+</body>
+</html>
